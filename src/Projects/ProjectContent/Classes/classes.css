@@ -1,0 +1,147 @@
+.labels {
+    display: flex;
+    flex-direction: column;
+    
+}
+.componentImage{
+  width: 80vw;
+}
+.caroussel-images{
+  display: flex;
+  align-items: center;
+}
+
+.project-arrow{
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.project-arrow:hover{
+  cursor: pointer;
+}
+
+.code-img{
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.class-label{
+  cursor: pointer;
+}
+
+.active-item{
+  color: #000000;
+  font-weight: bold;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto; 
+  background-color: #3a3a3a;
+  position: relative;
+
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #aaa #fff; /* For Firefox */
+}
+
+.lightbox-content::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.lightbox-content::-webkit-scrollbar-thumb {
+  background-color: #aaa; 
+  border-radius: 4px;
+}
+
+.lightbox-content::-webkit-scrollbar-track {
+  background-color: #fff; 
+}
+
+.lightbox-image{
+  max-width: 80vw;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+
+.labels label {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'code';
+    margin-bottom: 30px;
+}
+ 
+.method-table {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70vw;
+}
+
+.method-table h2 {
+  font-family: 'IBM';
+}
+
+table {
+    border-collapse: collapse;
+    font-family: 'code';
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Style for table headers */
+  th {
+    background-color: #444;
+    color: #000000;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #252525; /* Add border to the bottom of th */
+    border-right: 1px solid #252525; /* Add border to the right of th */
+  }
+  
+  /* Style for table cells */
+  td {
+    padding: 8px;
+    border-bottom: 1px solid #252525; 
+    border-right: 1px solid #252525
+  }
+  
+  /* Alternating row colors */
+  tr:nth-child(even) {
+    background-color: #444;
+  }
+  
+  /* Add some hover effect to rows */
+  tr:hover {
+    background-color: #555;
+  }

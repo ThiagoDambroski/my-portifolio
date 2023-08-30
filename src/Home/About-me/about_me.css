@@ -1,0 +1,98 @@
+.page-about-me{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.photo{
+    margin-left: 5vw;
+    border-radius: 20px;
+    max-width: 35vw;
+}
+
+.informations{
+    max-width: 35vw;
+    align-self: start;
+    margin-top: 8vh;
+    margin-right: 8vw;
+
+}
+
+.skills{
+    margin-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+   
+}   
+/*.code-small {
+    font-family: 'IBM';
+    font-weight: lighter;
+    font-size: 20px;
+}
+*/
+.code{
+    font-family: 'IBM';
+    font-weight: lighter;
+    
+}
+.icons {
+    
+    max-width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+}
+
+.row {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+    margin-bottom: 5vh;
+    
+    
+}
+
+
+.program-icon {
+    margin-right: -20px;
+    max-width: 5vw;
+    
+}
+
+.program-icon:hover {
+    cursor: pointer;
+}
+
+.program-icon:last-child{
+    margin-right: 0px;
+}
+
+
+.popup {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  z-index: 1; 
+  pointer-events: none; 
+  left:42vw;
+  width: 18vw;
+}
+
+.popup ul {
+    display: flex;
+    flex-direction: column;
+    font-family: 'IBM';
+    font-weight: normal;
+}
+
+.popup li {
+    list-style: none;
+    font-family: 'IBM';
+}

@@ -1,0 +1,45 @@
+import React from 'react'
+import './contactMe.css'
+import email from '../../assets/images/icon/contact icon/email.png'
+import telephone from '../../assets/images/icon/contact icon/telephone.png'
+import linkedin from '../../assets/images/icon/contact icon/linkedin.png'
+import gitHub from '../../assets/images/icon/contact icon/github.png'
+import SquareIcon from './SquareIcon'
+
+function ContactMe() {
+  return (
+    <div className='contact-page'>
+      <h1>Contact Me</h1>
+      <div className='squares'>
+        <SquareIcon
+          image = {email}
+          title = 'Email'
+          description = 'dambroskic@hotmail.com'
+          type= 'email'
+        />
+        <SquareIcon
+          image = {telephone}
+          title = 'Telphone'
+          description = '+81 99798-9475'
+          type = 'tel'
+        />
+        <SquareIcon
+          image = {gitHub}
+          title = 'Git Hub'
+          description = 'github.com/ThiagoDambroski'
+          type= 'git'
+        />  
+        <SquareIcon
+          image = {linkedin}
+          title = 'Linkedin'
+          description = 'thiago-dambroski-516a43211/'
+          type = 'linkedin'
+        /> 
+      
+      </div>    
+    </div>
+    
+  )
+}
+
+export default ContactMe

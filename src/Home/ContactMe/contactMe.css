@@ -1,0 +1,63 @@
+.contact-page{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+}
+
+.contact-page h1 {
+    font-family: 'IBM';
+    font-weight: normal;
+}
+
+.squares{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 30vh;
+    background-color: rgb(71, 67, 67);
+    margin: 30px;
+    border-radius: 10px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.square-icon:hover {
+    cursor: pointer;
+    width: 18vw;
+    height: 35vh;
+
+}
+
+.square-icon img {
+    max-width: 35%;
+    
+}
+
+
+.square-title{
+    font-size: 130%;
+    margin-top: 10%;
+    font-family: 'sourceSans';
+    font-weight: bolder;
+    color: black;
+    
+}
+
+
+
+.square-icon p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: small;
+    font-family: 'lato';
+    color: black;
+}
+

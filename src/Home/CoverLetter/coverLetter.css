@@ -1,0 +1,20 @@
+.cover-letter-pag{
+    margin-top: 5vh;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cover-letter-pag h1 {
+    font-family: 'IBM';
+}
+
+.cover-letter {
+    max-width: 70vw;
+}
+
+.cover-letter p {
+    font-family: 'code';
+    text-align: center;
+}
