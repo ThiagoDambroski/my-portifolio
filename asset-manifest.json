@@ -1,14 +1,16 @@
 {
   "files": {
     "main.css": "/my-portifolio/static/css/main.abaa217e.css",
-    "main.js": "/my-portifolio/static/js/main.58f70e8c.js",
+    "main.js": "/my-portifolio/static/js/main.23686c6d.js",
     "static/media/background.jpg": "/my-portifolio/static/media/background.c44ed04c57064dd1b4d5.jpg",
     "static/media/placeholder.jpg": "/my-portifolio/static/media/placeholder.c44ed04c57064dd1b4d5.jpg",
     "static/media/RestaurantServiceImpl.png": "/my-portifolio/static/media/RestaurantServiceImpl.b9e6a0bea24d04648926.png",
     "static/media/ProjectTypes.png": "/my-portifolio/static/media/ProjectTypes.04933a4ef4c5f4967cb4.png",
+    "static/media/ProjectsCss.png": "/my-portifolio/static/media/ProjectsCss.421aacc4535d155dcfe6.png",
     "static/media/Order Service Impl.png": "/my-portifolio/static/media/Order Service Impl.b7e8b360e56251664f45.png",
     "static/media/AppComponent.png": "/my-portifolio/static/media/AppComponent.6e49decdb2b994e2de49.png",
     "static/media/UserServiceImpl.png": "/my-portifolio/static/media/UserServiceImpl.1758851693938090736b.png",
+    "static/media/ProjectPages.png": "/my-portifolio/static/media/ProjectPages.b42e87bbe43c3cd793e0.png",
     "static/media/ContentPage2Css.png": "/my-portifolio/static/media/ContentPage2Css.3e5796e5c134457180ac.png",
     "static/media/App.png": "/my-portifolio/static/media/App.38a130fb45757c800708.png",
     "static/media/ItemServiceImpl.png": "/my-portifolio/static/media/ItemServiceImpl.7084d2eea33fae50b231.png",
@@ -35,6 +37,7 @@
     "static/media/ProjectTypesComponent.png": "/my-portifolio/static/media/ProjectTypesComponent.ea5db886d8c455d135f0.png",
     "static/media/Order Controller.png": "/my-portifolio/static/media/Order Controller.e0fc268898a635b67911.png",
     "static/media/CategoryServiceImpl.png": "/my-portifolio/static/media/CategoryServiceImpl.129badc9d78dbb555445.png",
+    "static/media/ProjectsPageComponent.png": "/my-portifolio/static/media/ProjectsPageComponent.6df077b86a208ec6d7fb.png",
     "static/media/CategoryController.png": "/my-portifolio/static/media/CategoryController.cbf79f20a39627d00ab9.png",
     "static/media/ContentPage2.png": "/my-portifolio/static/media/ContentPage2.23f2187b28daa10275ad.png",
     "static/media/Delivery Service Implementation.png": "/my-portifolio/static/media/Delivery Service Implementation.11240709445f9d5c701a.png",
@@ -109,10 +112,10 @@
     "static/media/spring-icon.svg": "/my-portifolio/static/media/spring-icon.5c62e7f4bbd6f07c0fd84d21ce9050ca.svg",
     "index.html": "/my-portifolio/index.html",
     "main.abaa217e.css.map": "/my-portifolio/static/css/main.abaa217e.css.map",
-    "main.58f70e8c.js.map": "/my-portifolio/static/js/main.58f70e8c.js.map"
+    "main.23686c6d.js.map": "/my-portifolio/static/js/main.23686c6d.js.map"
   },
   "entrypoints": [
     "static/css/main.abaa217e.css",
-    "static/js/main.58f70e8c.js"
+    "static/js/main.23686c6d.js"
   ]
 }
