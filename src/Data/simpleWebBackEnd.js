@@ -1,5 +1,7 @@
-import foodDeliveryBackEnd from '../assets/images/food-delivery/food-delivery-food-controller.png'
-import placeHolder from '../assets/images/food-delivery/placeholder.jpg'
+
+//SchemaImage
+import schemaImage from '../assets/images/web-store-project/schemaSimpleWeb.png'
+
 
 //User
 import userClass from '../assets/images/web-store-project/User/UserClass.png'
@@ -41,7 +43,7 @@ const simpleWebBackEnd =
             et congue neque aliquam nec. Curabitur varius rutrum lacus, a ultrices enim. Sed elementum convallis \
             turpis a iaculis. Integer ullamcorper laoreet justo, id scelerisque elit dignissim vitae. Nam quis efficitur \
             enim. Proin malesuada efficitur convallis. Donec vulputate odio eget semper fringilla.",
-        image: [userClass,itemClass,categoryClass,OrderItemClass,OrderClass],
+        image: [schemaImage,userClass,itemClass,categoryClass,OrderItemClass,OrderClass],
         type: 1, // back end TYPE 2 : FRONT | TYPE 3: FULL STACK
         navLink:"/backEndProjectWebStore",
         iconImage: javaIcon ,
