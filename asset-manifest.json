@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-portifolio/static/css/main.abaa217e.css",
-    "main.js": "/my-portifolio/static/js/main.9ad35533.js",
+    "main.js": "/my-portifolio/static/js/main.58f70e8c.js",
     "static/media/background.jpg": "/my-portifolio/static/media/background.c44ed04c57064dd1b4d5.jpg",
     "static/media/placeholder.jpg": "/my-portifolio/static/media/placeholder.c44ed04c57064dd1b4d5.jpg",
     "static/media/RestaurantServiceImpl.png": "/my-portifolio/static/media/RestaurantServiceImpl.b9e6a0bea24d04648926.png",
@@ -76,6 +76,7 @@
     "static/media/IBMPlexMono-Regular.ttf": "/my-portifolio/static/media/IBMPlexMono-Regular.1509e8d24f8562f776e4.ttf",
     "static/media/YsabeauSC-Black.ttf": "/my-portifolio/static/media/YsabeauSC-Black.73962355ec68ba9e3009.ttf",
     "static/media/Order Repository.png": "/my-portifolio/static/media/Order Repository.b6d5ce2524fc5b21eb07.png",
+    "static/media/schemaFood.png": "/my-portifolio/static/media/schemaFood.a7ceab24ac6be1b89585.png",
     "static/media/Exo-Regular.ttf": "/my-portifolio/static/media/Exo-Regular.71beb31d81ad501875c4.ttf",
     "static/media/Delivery Boy Repository.png": "/my-portifolio/static/media/Delivery Boy Repository.dca18fa879a865388e59.png",
     "static/media/Address Repository.png": "/my-portifolio/static/media/Address Repository.2c42e5659a60c8c28beb.png",
@@ -86,6 +87,7 @@
     "static/media/Lato-Bold.ttf": "/my-portifolio/static/media/Lato-Bold.636be8de934918e38ed9.ttf",
     "static/media/OrderRepository.png": "/my-portifolio/static/media/OrderRepository.fed8ec57a771a9eda375.png",
     "static/media/OrderItemRepository.png": "/my-portifolio/static/media/OrderItemRepository.f86b11442325d664171c.png",
+    "static/media/schemaSimpleWeb.png": "/my-portifolio/static/media/schemaSimpleWeb.5e3f97e13afb8da944f6.png",
     "static/media/RestaurantRepository.png": "/my-portifolio/static/media/RestaurantRepository.65cf806853c110b74f2f.png",
     "static/media/OrderFoodRepository.png": "/my-portifolio/static/media/OrderFoodRepository.368a80d2729db8bec00e.png",
     "static/media/thiago.jpg": "/my-portifolio/static/media/thiago.2cb7cd2ef0eab608fddc.jpg",
@@ -107,10 +109,10 @@
     "static/media/spring-icon.svg": "/my-portifolio/static/media/spring-icon.5c62e7f4bbd6f07c0fd84d21ce9050ca.svg",
     "index.html": "/my-portifolio/index.html",
     "main.abaa217e.css.map": "/my-portifolio/static/css/main.abaa217e.css.map",
-    "main.9ad35533.js.map": "/my-portifolio/static/js/main.9ad35533.js.map"
+    "main.58f70e8c.js.map": "/my-portifolio/static/js/main.58f70e8c.js.map"
   },
   "entrypoints": [
     "static/css/main.abaa217e.css",
-    "static/js/main.9ad35533.js"
+    "static/js/main.58f70e8c.js"
   ]
 }
