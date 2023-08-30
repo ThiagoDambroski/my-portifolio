@@ -27,7 +27,7 @@ function App() {
       }/>
       <Route path = "/backEndProjectFoodDelivery" element={
           <Projects
-           projectData = {projectData[0]}
+           projectData = {projectData[2]}
           />
       }/> 
 
@@ -39,7 +39,7 @@ function App() {
       }/> 
       <Route path = "/backEndProjectWebStore" element={
           <Projects
-           projectData = {projectData[2]}
+           projectData = {projectData[0]}
           />
       }/> 
       <Route path='/showCase' element={

@@ -33,7 +33,11 @@ import FooterCss from '../assets/images/architecture-portfolio/ContactFooter/Foo
 import ProjectsTypes from '../assets/images/architecture-portfolio/ProjectTypes/ProjectTypes.png'
 import ProjectsTypesComponent from '../assets/images/architecture-portfolio/ProjectTypes/ProjectTypesComponent.png'
 import TypeComponent from '../assets/images/architecture-portfolio/ProjectTypes/TypeComponent.png'
-import TypeBigComponent from '../assets/images/architecture-portfolio/ProjectTypes/TypeBigComponent.png'
+import ProjectCss from '../assets/images/architecture-portfolio/ProjectTypes/ProjectsCss.png'
+//ProjectsPage
+import ProjectsPage from '../assets/images/architecture-portfolio/ProjectsPage/ProjectPages.png'
+import ProjectsPageComponent from '../assets/images/architecture-portfolio/ProjectsPage/ProjectsPageComponent.png'
+import TypeBig from '../assets/images/architecture-portfolio/ProjectsPage/TypeBigComponent.png'
 
 //App js
 import App from '../assets/images/architecture-portfolio/App/App.png'
@@ -68,13 +72,14 @@ const architectFrontEnd =
                 [AboutMe,AboutMeComponent,MeComponent,AboutMeCss],
                 [FQA,FQAComponent,QuestionComponent,FQACss],
                 [ContactFooter,ContactFooterComponent,SectionComponent,FooterCss],
-                [ProjectsTypes,ProjectsTypesComponent,TypeComponent,TypeBigComponent],
+                [ProjectsTypes,ProjectsTypesComponent,TypeComponent,ProjectCss],
+                [ProjectsPage,ProjectsPageComponent,TypeBig,ProjectCss],
                 [App,AppComponent,HomeJSComponent]
     
             
             ],
             components:["Page 1","Page 2","Menu Bar","About Me","Frequently Questioned Answers","Contact Footer",
-            "Project Types","App.js"]
+            "Project Types","Project Page","App.js"]
         }
     }
 

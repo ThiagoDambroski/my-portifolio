@@ -5,6 +5,6 @@ import architectFrontEnd from './Data/architectFrontEnd.js'
 import simpleWebBackEnd from './Data/simpleWebBackEnd'
 
 export const projectData = [
-    backEnd,architectFrontEnd,simpleWebBackEnd
+    simpleWebBackEnd,architectFrontEnd,backEnd
 
 ]

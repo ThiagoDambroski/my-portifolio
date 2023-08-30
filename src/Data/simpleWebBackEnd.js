@@ -1,8 +1,6 @@
 
 //SchemaImage
 import schemaImage from '../assets/images/web-store-project/schemaSimpleWeb.png'
-
-
 //User
 import userClass from '../assets/images/web-store-project/User/UserClass.png'
 import userController from '../assets/images/web-store-project/User/UserController.png'
