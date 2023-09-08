@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portifolio/static/css/main.abaa217e.css",
-    "main.js": "/my-portifolio/static/js/main.23686c6d.js",
+    "main.css": "/my-portifolio/static/css/main.195a0c10.css",
+    "main.js": "/my-portifolio/static/js/main.2beb1788.js",
     "static/media/background.jpg": "/my-portifolio/static/media/background.c44ed04c57064dd1b4d5.jpg",
     "static/media/placeholder.jpg": "/my-portifolio/static/media/placeholder.c44ed04c57064dd1b4d5.jpg",
     "static/media/RestaurantServiceImpl.png": "/my-portifolio/static/media/RestaurantServiceImpl.b9e6a0bea24d04648926.png",
@@ -105,17 +105,18 @@
     "static/media/email.png": "/my-portifolio/static/media/email.91ec0a365229102b9e24.png",
     "static/media/java.png": "/my-portifolio/static/media/java.f5dd86c3ef6ef3f85acf.png",
     "static/media/project-left-arrow.png": "/my-portifolio/static/media/project-left-arrow.dacd615c0e3f873f2124.png",
+    "static/media/upwork.png": "/my-portifolio/static/media/upwork.d0311f71733559bfe8d1.png",
     "static/media/html.png": "/my-portifolio/static/media/html.6e930594286d8afe4c79.png",
     "static/media/css.png": "/my-portifolio/static/media/css.463e319bad8e0edf1ef7.png",
     "static/media/linkedin.png": "/my-portifolio/static/media/linkedin.3855ecaebc4cec15bd68.png",
     "static/media/js.png": "/my-portifolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/spring-icon.svg": "/my-portifolio/static/media/spring-icon.5c62e7f4bbd6f07c0fd84d21ce9050ca.svg",
     "index.html": "/my-portifolio/index.html",
-    "main.abaa217e.css.map": "/my-portifolio/static/css/main.abaa217e.css.map",
-    "main.23686c6d.js.map": "/my-portifolio/static/js/main.23686c6d.js.map"
+    "main.195a0c10.css.map": "/my-portifolio/static/css/main.195a0c10.css.map",
+    "main.2beb1788.js.map": "/my-portifolio/static/js/main.2beb1788.js.map"
   },
   "entrypoints": [
-    "static/css/main.abaa217e.css",
-    "static/js/main.23686c6d.js"
+    "static/css/main.195a0c10.css",
+    "static/js/main.2beb1788.js"
   ]
 }
