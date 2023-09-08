@@ -4,6 +4,7 @@ import email from '../../assets/images/icon/contact icon/email.png'
 import telephone from '../../assets/images/icon/contact icon/telephone.png'
 import linkedin from '../../assets/images/icon/contact icon/linkedin.png'
 import gitHub from '../../assets/images/icon/contact icon/github.png'
+import upWork from '../../assets/images/icon/contact icon/upwork.png'
 import SquareIcon from './SquareIcon'
 
 function ContactMe() {
@@ -34,6 +35,12 @@ function ContactMe() {
           title = 'Linkedin'
           description = 'thiago-dambroski-516a43211/'
           type = 'linkedin'
+        /> 
+        <SquareIcon
+          image = {upWork}
+          title = 'upwork'
+          description = 'Thiago Dambroski'
+          type = 'upwork'
         /> 
       
       </div>    

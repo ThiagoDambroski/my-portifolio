@@ -54,6 +54,7 @@
 }
 
 .project-info{
+    text-align: center;
     font-family: 'code';
     margin-top: 10px;
     margin-bottom: 20px;
@@ -114,3 +115,25 @@
     font-family: 'exo';
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .project-page {
+        padding-top: 5vh;
+
+    }
+    .back-button {
+        top: 5vh;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+
+    .project-title h2 {
+        font-size: medium;
+    }
+    .project-title img {
+        max-width: 7vw;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+  }

@@ -103,7 +103,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    max-width: 70vw;
+   
 }
 
 .method-table h2 {
@@ -113,35 +113,67 @@
 table {
     border-collapse: collapse;
     font-family: 'code';
-    width: 100%;
+    text-align: center;
+    max-width: 80vw;
     margin-bottom: 20px;
     background-color: #333;
     color: #fff;
   }
   
-  /* Style for table headers */
+
   th {
     background-color: #444;
     color: #000000;
-    text-align: left;
+    text-align: center;
     padding: 8px;
-    border-bottom: 1px solid #252525; /* Add border to the bottom of th */
-    border-right: 1px solid #252525; /* Add border to the right of th */
+    border-bottom: 1px solid #252525; 
+    border-right: 1px solid #252525; 
   }
   
-  /* Style for table cells */
+
   td {
     padding: 8px;
     border-bottom: 1px solid #252525; 
     border-right: 1px solid #252525
   }
   
-  /* Alternating row colors */
+
   tr:nth-child(even) {
     background-color: #444;
   }
   
-  /* Add some hover effect to rows */
   tr:hover {
     background-color: #555;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .code-img{
+      width: 80vw;
+      height: 70vh;
+    }
+
+    .project-arrow {
+      max-width: 25px;
+      max-height: 25px;
+    }
+    
+
+    td{
+      overflow: scroll;
+      
+      max-width: 40vw;
+    }
+
+    .lightbox-content::-webkit-scrollbar {
+      width: 0px; 
+      height: 0px;
+    }
+   
+
+    .lightbox-image{
+      
+      max-width: 105vh;
+    }
+
+    
   }

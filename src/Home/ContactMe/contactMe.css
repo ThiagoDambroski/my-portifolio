@@ -24,7 +24,7 @@
     width: 15vw;
     height: 30vh;
     background-color: rgb(71, 67, 67);
-    margin: 30px;
+    margin: 20px;
     border-radius: 10px;
     transition: width 0.3s ease, height 0.3s ease;
 }
@@ -41,6 +41,14 @@
     
 }
 
+.square-icon p {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: smaller;
+    font-family: 'lato';
+    color: black;
+}
+
 
 .square-title{
     font-size: 130%;
@@ -53,11 +61,34 @@
 
 
 
-.square-icon p {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-size: small;
-    font-family: 'lato';
-    color: black;
-}
 
+@media only screen and (max-width: 600px) {
+
+    .squares {
+       flex-wrap: wrap;
+    }
+    .square-icon {
+        width: 26vw;
+        margin: 5px;
+        height: 18vh;
+    }
+    
+    .square-icon:hover {
+        cursor: pointer;
+        width: 30vw;
+        height: 18vh;
+    }
+    
+    .square-icon p {
+        display: none;
+    }
+    .square-title{
+        font-size: 80%;
+        margin-top: 10%;
+        font-family: 'sourceSans';
+        font-weight: bolder;
+        color: black;
+        
+    }
+
+  }

@@ -1,5 +1,5 @@
 .showCase-page{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .flex-toggle{
@@ -30,8 +30,7 @@
 }
 
 .toggle-project{
-    max-width: 35%;
-    
+    max-width: 35%; 
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -62,3 +61,17 @@
     align-items: center;
     justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .toggle-project{
+        max-width: 85vw; 
+    }
+
+    .toggle-project a{
+        text-align: center;
+    }
+    .toggle-project-title{
+        width: 90vw;
+    }
+  }

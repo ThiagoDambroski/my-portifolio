@@ -5,17 +5,20 @@ function SquareIcon({image,title,description,type}) {
   const handleClick = () => {
 
     if(type === 'email'){
-      window.location.href = 'mailto:dambroskic@hotmail.com'
+      window.location.href = `mailto:${description}`
     }
     if(type === 'tel'){
       const phoneNumber = '5581997989475';
       window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}`, '_blank')
     }
     if(type === 'git'){
-      window.open(`https://github.com/ThiagoDambroski`, '_blank')
+      window.open(`https://${description}`, '_blank')
     }
     if(type === 'linkedin'){
-      window.open(`https://linkedin.com/in/thiago-dambroski-516a43211/`, '_blank')
+      window.open(`https://linkedin.com/in/${description}`, '_blank')
+    }
+    if(type === 'upwork'){
+      window.open(`https://www.upwork.com/freelancers/~01e0c744d6b49b8eb6`, '_blank')
     }
     
   }
