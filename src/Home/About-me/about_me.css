@@ -97,6 +97,12 @@
     list-style: none;
     font-family: 'IBM';
 }
+
+.skill-title {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+}
 @media only screen and (max-width: 600px) {
     .page-about-me{  
         /*new*/
@@ -134,5 +140,6 @@
         top: 110vh;
         left: 55vw;
         width: 30vw;
-      }
+    }
+    
   }

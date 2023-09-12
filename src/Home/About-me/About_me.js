@@ -15,7 +15,7 @@ import SkillPopup from './SkillPopup'
 
 function About_me() {
 
-  const [hoverSkill, setHoverSkill] = useState(null)
+  const [hoverSkill, setHoverSkill] = useState('react')
 
   const handleSkillHover = (skill) => {
     setHoverSkill(skill)
@@ -35,7 +35,7 @@ function About_me() {
               <div className='row'>
                 <img src={reactIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('react')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                  
                 />
 
                 <SkillPopup skill={'react'} isVisible={hoverSkill === 'react'}/>
@@ -50,13 +50,13 @@ function About_me() {
 
                 <img src={javaIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('java')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                  
                 />
                
 
                 <img src={springIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('spring')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                  
                 />
 
                 
@@ -64,19 +64,19 @@ function About_me() {
               <div className='row'>
                 <img src={htmlIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('html')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                  
                 />
                 
 
                 <img src={cssIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('css')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                  
                 />
                 
 
                 <img src={jsIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('javaScript')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                 
                 />
                 
               
@@ -84,19 +84,19 @@ function About_me() {
               <div className='row'>
                 <img src={phytonIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('phyton')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                 
                 />
                 
 
                 <img src={mySqlIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('mysql')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                 
                 />
                 
 
                 <img src={gitIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('git')}
-                  onMouseLeave={() => handleSkillHover(null)}
+                 
                 />
                 
                 

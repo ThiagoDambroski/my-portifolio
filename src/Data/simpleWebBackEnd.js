@@ -35,12 +35,10 @@ const simpleWebBackEnd =
         id: 1,
         title: "Simple Web Store Back-End | Spring Boot",
         gitLink: "https://github.com/ThiagoDambroski/Simple-Web-Store-Spring-Boot",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus nunc eu turpis cursus, " +
-            "vitae posuere ex euismod. Integer varius bibendum tristique. Sed mattis, lectus vel finibus malesuada, \
-            dui purus fermentum nisi, nec lobortis velit mi sit amet felis. Praesent sodales condimentum ipsum, \
-            et congue neque aliquam nec. Curabitur varius rutrum lacus, a ultrices enim. Sed elementum convallis \
-            turpis a iaculis. Integer ullamcorper laoreet justo, id scelerisque elit dignissim vitae. Nam quis efficitur \
-            enim. Proin malesuada efficitur convallis. Donec vulputate odio eget semper fringilla.",
+        description: "This portfolio offers a comprehensive insight into the components and functionality of" +
+        "the Spring Boot web store application. Each section meticulously outlines the endpoints, properties," +
+        "methods, and pertinent service implementations for every component. To begin, make sure to configure a " +
+        "MySQL database named 'web_application.'",
         image: [schemaImage,userClass,itemClass,categoryClass,OrderItemClass,OrderClass],
         type: 1, // back end TYPE 2 : FRONT | TYPE 3: FULL STACK
         navLink:"/backEndProjectWebStore",

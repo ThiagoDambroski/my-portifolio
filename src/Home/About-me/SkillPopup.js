@@ -41,7 +41,10 @@ function SkillPopup({skill,isVisible}) {
 
   return (
     <div className='popup'>
+      
         <ul>
+        <div className='skill-title'>{skill}</div>
+        <br/>
           {skillInfos[skill].map((item) => 
             <li>{item}</li>
           )}

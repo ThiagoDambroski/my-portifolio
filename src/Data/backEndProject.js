@@ -51,12 +51,10 @@ const backEnd =
         id: 1,
         title: "Food Delivery Back-End | Spring Boot",
         gitLink: "https://github.com/ThiagoDambroski/foodDeliveryProjectBackEnd",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus nunc eu turpis cursus, " +
-            "vitae posuere ex euismod. Integer varius bibendum tristique. Sed mattis, lectus vel finibus malesuada, \
-            dui purus fermentum nisi, nec lobortis velit mi sit amet felis. Praesent sodales condimentum ipsum, \
-            et congue neque aliquam nec. Curabitur varius rutrum lacus, a ultrices enim. Sed elementum convallis \
-            turpis a iaculis. Integer ullamcorper laoreet justo, id scelerisque elit dignissim vitae. Nam quis efficitur \
-            enim. Proin malesuada efficitur convallis. Donec vulputate odio eget semper fringilla.",
+        description: "This project is a Spring Boot application for a simple Food Delivery system," +
+        "encompassing various components, including Users, Restaurants, Food items, Orders, Delivery," +
+        "and Addresses. The system enables users to interact with these components via API endpoints," + 
+        "but you'll need to set up a MySQL database named 'fooddb' to begin.",
         image: [SchemaImage,userClass,restaurantClass,OrderFoodClass,OrderClass,FoodClass,DeliveryBoyClass,DeliveryClass,AddressClass],
         type: 1, // back end TYPE 2 : FRONT | TYPE 3: FULL STACK
         navLink:"/backEndProjectFoodDelivery",

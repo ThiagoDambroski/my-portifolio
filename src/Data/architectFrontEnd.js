@@ -53,12 +53,9 @@ const architectFrontEnd =
         id: 2,
         title: "Portfolio architect | React",
         gitLink: "https://github.com/ThiagoDambroski/portifolio-claudio-manguinho-react",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus nunc eu turpis cursus, " +
-            "vitae posuere ex euismod. Integer varius bibendum tristique. Sed mattis, lectus vel finibus malesuada, \
-            dui purus fermentum nisi, nec lobortis velit mi sit amet felis. Praesent sodales condimentum ipsum, \
-            et congue neque aliquam nec. Curabitur varius rutrum lacus, a ultrices enim. Sed elementum convallis \
-            turpis a iaculis. Integer ullamcorper laoreet justo, id scelerisque elit dignissim vitae. Nam quis efficitur \
-            enim. Proin malesuada efficitur convallis. Donec vulputate odio eget semper fringilla.",
+        description: "This portfolio offers a exploration of the code and components for an React-based web application,"+
+        "specifically tailored for showcasing architectural projects. Within each section, you'll find an  breakdown of "
+        +"component codes, complete with corresponding images of these components.",
         image: [HomeComponent,Page2,AboutMe,FQA,ContactFooter,ProjectsTypes,App],
         type: 2, // TYPE 2 : FRONT ,
         navLink:"/frontEndProjectArchitectPortifolio",
