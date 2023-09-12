@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/my-portifolio/static/css/main.195a0c10.css",
-    "main.js": "/my-portifolio/static/js/main.2beb1788.js",
-    "static/media/background.jpg": "/my-portifolio/static/media/background.c44ed04c57064dd1b4d5.jpg",
+    "main.css": "/my-portifolio/static/css/main.601b24ff.css",
+    "main.js": "/my-portifolio/static/js/main.d915565f.js",
     "static/media/placeholder.jpg": "/my-portifolio/static/media/placeholder.c44ed04c57064dd1b4d5.jpg",
+    "static/media/background.jpg": "/my-portifolio/static/media/background.8eb3492783868e8ca418.jpg",
     "static/media/RestaurantServiceImpl.png": "/my-portifolio/static/media/RestaurantServiceImpl.b9e6a0bea24d04648926.png",
     "static/media/ProjectTypes.png": "/my-portifolio/static/media/ProjectTypes.04933a4ef4c5f4967cb4.png",
     "static/media/ProjectsCss.png": "/my-portifolio/static/media/ProjectsCss.421aacc4535d155dcfe6.png",
@@ -112,11 +112,11 @@
     "static/media/js.png": "/my-portifolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/spring-icon.svg": "/my-portifolio/static/media/spring-icon.5c62e7f4bbd6f07c0fd84d21ce9050ca.svg",
     "index.html": "/my-portifolio/index.html",
-    "main.195a0c10.css.map": "/my-portifolio/static/css/main.195a0c10.css.map",
-    "main.2beb1788.js.map": "/my-portifolio/static/js/main.2beb1788.js.map"
+    "main.601b24ff.css.map": "/my-portifolio/static/css/main.601b24ff.css.map",
+    "main.d915565f.js.map": "/my-portifolio/static/js/main.d915565f.js.map"
   },
   "entrypoints": [
-    "static/css/main.195a0c10.css",
-    "static/js/main.2beb1788.js"
+    "static/css/main.601b24ff.css",
+    "static/js/main.d915565f.js"
   ]
 }
