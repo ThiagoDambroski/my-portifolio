@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-portifolio/static/css/main.601b24ff.css",
-    "main.js": "/my-portifolio/static/js/main.d915565f.js",
+    "main.css": "/my-portifolio/static/css/main.8bf63afa.css",
+    "main.js": "/my-portifolio/static/js/main.ad947304.js",
     "static/media/placeholder.jpg": "/my-portifolio/static/media/placeholder.c44ed04c57064dd1b4d5.jpg",
     "static/media/background.jpg": "/my-portifolio/static/media/background.8eb3492783868e8ca418.jpg",
     "static/media/RestaurantServiceImpl.png": "/my-portifolio/static/media/RestaurantServiceImpl.b9e6a0bea24d04648926.png",
@@ -112,11 +112,11 @@
     "static/media/js.png": "/my-portifolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/spring-icon.svg": "/my-portifolio/static/media/spring-icon.5c62e7f4bbd6f07c0fd84d21ce9050ca.svg",
     "index.html": "/my-portifolio/index.html",
-    "main.601b24ff.css.map": "/my-portifolio/static/css/main.601b24ff.css.map",
-    "main.d915565f.js.map": "/my-portifolio/static/js/main.d915565f.js.map"
+    "main.8bf63afa.css.map": "/my-portifolio/static/css/main.8bf63afa.css.map",
+    "main.ad947304.js.map": "/my-portifolio/static/js/main.ad947304.js.map"
   },
   "entrypoints": [
-    "static/css/main.601b24ff.css",
-    "static/js/main.d915565f.js"
+    "static/css/main.8bf63afa.css",
+    "static/js/main.ad947304.js"
   ]
 }
