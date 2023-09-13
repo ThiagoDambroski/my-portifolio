@@ -56,10 +56,12 @@ function CarousselImages({ images, options }) {
 
   const openLightbox = () => {
     setLightboxOpen(true);
+    document.body.classList.add('no-scroll');
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
+    document.body.classList.remove('no-scroll');
   };
 
   return (

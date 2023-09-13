@@ -32,6 +32,10 @@ body{
   color: #ffffff;
 }
 
+.no-scroll{
+  overflow: hidden;
+}
+
 body::-webkit-scrollbar {
   width: 8px; 
 }
