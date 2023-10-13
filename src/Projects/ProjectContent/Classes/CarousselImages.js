@@ -105,12 +105,12 @@ function CarousselImages({ images, options }) {
           </div>
 
           {options === 1 && (
-            <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} />
+            <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} alt='right-arrow'/>
           )}
           {options === 2 && (
            <>
               {arrowRightVisible && (
-                <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} />
+                <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} alt='right-arrow'/>
               )}
            </>
           )}
