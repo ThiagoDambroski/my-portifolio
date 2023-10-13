@@ -13,7 +13,7 @@ import gitIcon from '../../assets/images/icon/programs icon/git.png'
 import SkillPopup from './SkillPopup'
 
 
-function About_me() {
+function AboutMe() {
 
   const [hoverSkill, setHoverSkill] = useState('react')
 
@@ -24,7 +24,7 @@ function About_me() {
 
   return (
     <div className='page-about-me'>
-        <img src={thiago} className='photo'/>
+        <img src={thiago} className='photo' alt='selfie'/>
         <div className='informations'>
             <div className='skills'>
               <h2 className='code' >My Skills:</h2>
@@ -35,7 +35,7 @@ function About_me() {
               <div className='row'>
                 <img src={reactIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('react')}
-                  
+                  alt='react-icon'
                 />
 
                 <SkillPopup skill={'react'} isVisible={hoverSkill === 'react'}/>
@@ -50,13 +50,14 @@ function About_me() {
 
                 <img src={javaIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('java')}
+                  alt='java-icon'
                   
                 />
                
 
                 <img src={springIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('spring')}
-                  
+                  alt='spring-icon'
                 />
 
                 
@@ -64,18 +65,21 @@ function About_me() {
               <div className='row'>
                 <img src={htmlIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('html')}
+                  alt='html-icon'
                   
                 />
                 
 
                 <img src={cssIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('css')}
+                  alt='css-icon'
                   
                 />
                 
 
                 <img src={jsIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('javaScript')}
+                  alt='javaScript-icon'
                  
                 />
                 
@@ -84,18 +88,21 @@ function About_me() {
               <div className='row'>
                 <img src={phytonIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('phyton')}
+                  alt='phyton-icon'
                  
                 />
                 
 
                 <img src={mySqlIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('mysql')}
+                  alt='mysql-icon'
                  
                 />
                 
 
                 <img src={gitIcon} className='program-icon'
                   onMouseEnter={() => handleSkillHover('git')}
+                  alt='git-icon'
                  
                 />
                 
@@ -111,4 +118,4 @@ function About_me() {
   )
 }
 
-export default About_me
+export default AboutMe

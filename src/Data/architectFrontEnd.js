@@ -1,5 +1,4 @@
-import foodDeliveryBackEnd from '../assets/images/food-delivery/food-delivery-food-controller.png'
-import placeHolder from '../assets/images/food-delivery/placeholder.jpg'
+
 //React Portifolio architecture-portfolio
 import HomeComponent from '../assets/images/architecture-portfolio/HomePage/HomePage.png'
 import Page1Component from '../assets/images/architecture-portfolio/HomePage/Page1Component.png'

@@ -82,19 +82,19 @@ function Page1({resetScreen}) {
   return (
     <div className='page1'>
       <div className='project-type'>
-        <img src={leftArrow} className='arrow-img' onClick={changePrevious} />
+        <img src={leftArrow} className='arrow-img' onClick={changePrevious} alt='left-arrow' />
         <h1 className='page1-title'>{projectName}</h1>
-        <img src={rigthArrow} className='arrow-img' onClick={changeNext}/>
+        <img src={rigthArrow} className='arrow-img' onClick={changeNext} alt='right-arrow'/>
 
       </div>
       
       <div className='div-projects-images'>
         {activeProject.length > 1 &&
-          <img src={compactLeftArrow} className='arrow-img' onClick={changeCountPrevious} />
+          <img src={compactLeftArrow} className='arrow-img' onClick={changeCountPrevious} alt='left-arrow' />
         }
         <img className='projects-image' src={activeProject[countProject].image[0]}/>
         {activeProject.length > 1 &&
-          <img src={compactRigthArrow} className='arrow-img' onClick={changeCountNext} />
+          <img src={compactRigthArrow} className='arrow-img' onClick={changeCountNext} alt='right-arrow'/>
         }
 
 

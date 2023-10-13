@@ -11,7 +11,7 @@ function CarousselImages({ images, options }) {
   const [arrowLeftVisible, setArrowLeftVisible] = useState(false);
 
   const nextProject = () => {
-    if(options == 1){
+    if(options === 1){
       if (index + 1 >= images.length) {
         setIndex(0);
        
@@ -34,7 +34,7 @@ function CarousselImages({ images, options }) {
   };
 
   const previousProject = () => {
-    if(options == 1){
+    if(options === 1){
       if (index - 1 < 0) {
         setIndex(images.length - 1);
       } else {
@@ -68,19 +68,19 @@ function CarousselImages({ images, options }) {
     <div className='caroussel-images'>
       {options === 1 && (
         <>
-          <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} />
-          <img src={images[index]} className='code-img' onClick={openLightbox} />
-          <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} />
+          <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} alt='left-arrow'/>
+          <img src={images[index]} className='code-img' onClick={openLightbox}  alt='code-image'/>
+          <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} alt='right-arrow' />
         </>
       )}
       {options === 2 && (
         <>
           {arrowLeftVisible && (
-            <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} />
+            <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject}  alt='left-arrow'/>
           )}
-          <img src={images[index]} className='code-img' onClick={openLightbox} />
+          <img src={images[index]} className='code-img' onClick={openLightbox} alt='code-image'/>
           {arrowRightVisible && (
-            <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} />
+            <img src={ProjectArrowRight} className='project-arrow' onClick={nextProject} alt='right-arrow'/>
           )}
         </>
       )}
@@ -88,12 +88,12 @@ function CarousselImages({ images, options }) {
       {lightboxOpen && (
         <div className='lightbox'>
           {options === 1 && (
-            <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} />
+            <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject}  alt='left-arrow'/>
           )}
           {options === 2 && (
            <>
               {arrowLeftVisible && (
-                <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} />
+                <img src={ProjectArrowLeft} className='project-arrow' onClick={previousProject} alt='left-arrow'/>
               )}
            </>
           )}
@@ -101,7 +101,7 @@ function CarousselImages({ images, options }) {
             X
           </span>
           <div className='lightbox-content'>
-            <img src={images[index]} className='lightbox-image' alt={`Image ${index}`} />
+            <img src={images[index]} className='lightbox-image' alt={`${index}`} />
           </div>
 
           {options === 1 && (

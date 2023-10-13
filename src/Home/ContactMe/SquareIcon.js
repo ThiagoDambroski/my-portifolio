@@ -26,7 +26,7 @@ function SquareIcon({image,title,description,type}) {
 
   return (
     <div className='square-icon' onClick={handleClick}> 
-        <img src={image}/>
+        <img src={image} alt='icons'/>
         <span className='square-title'>{title}</span>
         <p>{description}</p>
 
