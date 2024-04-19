@@ -2,22 +2,53 @@
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
+.page-about-me-cover-letter{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.page-about-me-cover-letter h1{
+    font-family: 'IBM';
+    margin-bottom: 0px;
+    
+}
+.page-about-me-cover-letter p{
+    width: 90%;
+    font-size: 15px;
+    font-family: 'IBM';
+}
+
 .photo{
-    margin-left: 5vw;
-    border-radius: 20px;
-    max-width: 35vw;
+    margin-left: 25px;
+    border-radius: 10px;
+    max-width: 450px;
 }
 
 .informations{
-    max-width: 35vw;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
     align-self: start;
-    margin-top: 8vh;
-    margin-right: 8vw;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 
+}
+
+.informations-skills{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills{
@@ -38,8 +69,8 @@
     
 }
 .icons {
-    
-    max-width: 30vw;
+ 
+    max-width: 450px;
     display: flex;
     flex-wrap: wrap;
     
@@ -58,8 +89,10 @@
 
 
 .program-icon {
+    
     margin-right: -20px;
-    max-width: 5vw;
+    max-width: 90px;
+    
     
 }
 
@@ -75,33 +108,45 @@
 .popup {
   display: flex;
   justify-content: center;
-  position: absolute;
+  
   background-color: rgba(0, 0, 0, 0.8);
   color: #fff;
   padding: 8px;
   border-radius: 5px;
   z-index: 1; 
-  pointer-events: none; 
-  left:42vw;
-  width: 18vw;
+  
+  width: 450px;
+  height: 450px;
 }
 
 .popup ul {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     font-family: 'IBM';
     font-weight: normal;
 }
 
 .popup li {
+    
+    font-size: 18px;
+    margin-bottom: 10px;
     list-style: none;
     font-family: 'IBM';
 }
 
 .skill-title {
     display: flex;
+   
     justify-content: center;
     text-transform: capitalize;
+}
+
+.skill-title p {
+    margin-bottom: 0px;
+}
+.cursorPointer:hover{
+    cursor: pointer;
 }
 @media only screen and (max-width: 600px) {
     .page-about-me{  

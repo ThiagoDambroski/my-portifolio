@@ -1,0 +1,128 @@
+.newPage1-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newPage1-all-projects-button{
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(131, 130, 130);
+    font-family: 'IBM';
+    transition: all 0.5s ease-in ;
+}
+
+.newPage1-all-projects-button:hover{
+    cursor: pointer;
+    color: black;
+    border-color: black;
+    background-color: white;
+}
+.newPage1-front-end{
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newPage1-front-end h1{
+    font-family: 'IBM';
+    color:gold
+}
+/*Carrousel*/
+
+.carousel-container {
+    display: flex;
+   
+    transition: transform 0.5s ease; /* Add transition property */
+    
+    max-width: 99vw;
+  }
+  
+  .carousel-item {
+    display: flex;
+    width: 50vw;
+    flex: 0 0 100%;
+    
+   
+  }
+
+.carrouselNewPage{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.carrouselNewPage-images{
+    
+    display: flex;
+    justify-content: center;
+    
+}
+.carrouselNewPage-images-multi{
+    
+    display: flex;
+   justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+.carrouselNewPage-images-multi img{
+    width: 43%;
+    height: 250px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    transition: all 0.5s ease-in;
+}
+.carrouselNewPage-images-multi img:hover{
+   width: 44%;
+   height: 255px;
+    cursor: pointer;
+}
+
+.carrouselNewPage-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'IBM';
+}
+
+.carrouselNewPage-desc p {
+    margin-top: 0px;
+    max-width: 80%;
+}
+
+.carrouselNewPage-arrow{
+    
+    align-self: center;
+    width: 55px;
+    height: 55px;
+}
+
+.carrouselNewPage-arrow:hover{
+    cursor: pointer;
+}
+.carrouselNewPage-button{
+    margin-bottom: 15px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    font-family: 'IBM';
+    color:white;
+    background-color: black;
+    border: 1px solid white;
+    transition: all 0.5s ease-in
+}
+
+.carrouselNewPage-button:hover {
+    cursor: pointer;
+    color: black;
+    border-color: black;
+    background-color: white;
+}
+

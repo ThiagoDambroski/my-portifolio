@@ -12,8 +12,12 @@
   }
   
   .title {
-    font-family: 'ysabeauSC';
-    font-size: 5vw;
+    /*Monaco,Lucida Console,
+    Liberation Mono,DejaVu Sans Mono,
+    Bitstream Vera Sans Mono,Courier New
+    */
+    font-family:'IBM';
+    font-size: 55px;
     color: white;
   }
  
@@ -22,7 +26,7 @@
     font-family: 'IBM';
     color: white;
     font-size: 17px;
-    animation: slideIn 1.5s ease-out;
+    animation: slideIn 1.0s ease-out;
   }
   
   @keyframes slideIn {

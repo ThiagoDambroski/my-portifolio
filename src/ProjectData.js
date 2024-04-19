@@ -1,8 +1,10 @@
-import backEnd from './Data/backEndProject'
-import architectFrontEnd from './Data/architectFrontEnd.js'
-import simpleWebBackEnd from './Data/simpleWebBackEnd'
+import backEnd from "./Data/backEndProject";
+import architectFrontEnd from "./Data/architectFrontEnd.js";
+import simpleWebBackEnd from "./Data/simpleWebBackEnd";
 
 export const projectData = [
-    simpleWebBackEnd,architectFrontEnd,backEnd
-
-]
+  simpleWebBackEnd,
+  architectFrontEnd,
+  backEnd,
+  architectFrontEnd,
+];
