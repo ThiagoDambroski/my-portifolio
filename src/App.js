@@ -26,9 +26,18 @@ function App() {
           element={<Projects projectData={projectData[1]} />}
         />
         <Route
+          path="/frontEndProjectReeyogar"
+          element={<Projects projectData={projectData[3]} />}
+        />
+        <Route
+          path="/frontEndProjectPapafigo"
+          element={<Projects projectData={projectData[4]} />}
+        />
+        <Route
           path="/backEndProjectWebStore"
           element={<Projects projectData={projectData[0]} />}
         />
+
         <Route
           path="/showCase"
           element={<ProjectsShowCase projects={projectData} />}

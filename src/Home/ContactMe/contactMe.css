@@ -21,7 +21,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15vw;
+    width: 150px;
     height: 30vh;
     background-color: rgb(71, 67, 67);
     margin: 20px;
@@ -31,8 +31,9 @@
 
 .square-icon:hover {
     cursor: pointer;
-    width: 18vw;
+    width: 200px;
     height: 35vh;
+   
 
 }
 
@@ -44,7 +45,7 @@
 .square-icon p {
     margin-top: 10px;
     margin-bottom: 0px;
-    font-size: smaller;
+    font-size: 10px;
     font-family: 'lato';
     color: black;
 }
@@ -63,7 +64,12 @@
 
 
 @media only screen and (max-width: 600px) {
-
+    .contact-page{
+        max-width: 98%;
+    }
+    .contact-page{
+        font-size: 15px
+    }
     .squares {
        flex-wrap: wrap;
     }

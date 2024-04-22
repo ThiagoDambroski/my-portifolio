@@ -14,7 +14,7 @@ function ProjectPage({ item }) {
   };
 
   const [ativeImage, setAtiveImage] = useState(0);
-  const maxImage = item.item.images.length - 1;
+  const maxImage = item.images.length - 1;
 
   const changeToNext = () => {
     if (ativeImage === maxImage) {
@@ -32,8 +32,33 @@ function ProjectPage({ item }) {
     }
   };
 
+  const [lightboxOpen, setLightboxOpen] = useState({
+    active: false,
+    image: null,
+  });
+
+  const openLightbox = (image) => {
+    setLightboxOpen({ active: true, image: image });
+    document.body.classList.add("no-scroll");
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen({ active: false, image: null });
+    document.body.classList.remove("no-scroll");
+  };
+
   return (
     <div className="project-page">
+      {lightboxOpen.active && (
+        <div className="lightbox">
+          <span className="close-button" onClick={closeLightbox}>
+            X
+          </span>
+          <div className="lightbox-content">
+            <img src={lightboxOpen.image} className="lightbox-image" />
+          </div>
+        </div>
+      )}
       <button onClick={goBack} className="back-button" />
       <div className="project-title">
         <a href={item.gitLink} target="_blank">
@@ -43,21 +68,31 @@ function ProjectPage({ item }) {
       </div>
 
       <div className="div-image">
-        <img
-          src={smallLeftArrow}
-          className="small-arrow"
-          onClick={changeToPrevious}
-        />
-        <img src={item.image[ativeImage]} className="project-image" />
-        <img
-          src={smallRightArrow}
-          className="small-arrow"
-          onClick={changeToNext}
-        />
-      </div>
+        <div
+          className="carousel-container-components "
+          style={{ transform: `translateX(-${ativeImage * 100}%)` }}
+        >
+          {item.images.map((image, i) => (
+            <div key={i} className="carousel-item-components">
+              <img
+                src={smallLeftArrow}
+                className="small-arrow"
+                onClick={() => changeToPrevious()}
+              />
+              <img
+                src={image}
+                className="project-image"
+                onClick={() => openLightbox(image)}
+              />
 
-      <div className="project-info">
-        <p>{item.description}</p>
+              <img
+                src={smallRightArrow}
+                className="small-arrow"
+                onClick={() => changeToNext()}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

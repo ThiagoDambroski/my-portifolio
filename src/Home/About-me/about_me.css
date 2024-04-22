@@ -148,15 +148,37 @@
 .cursorPointer:hover{
     cursor: pointer;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .page-about-me{  
         /*new*/
+        max-width: 99%;
         align-items: flex-start;
         flex-direction: column;
         justify-content: center;
     }
+
+    .photo{
+        margin-left: 0px;
+        align-self: center;
+        max-width: 250px;
+    }
+    .page-about-me-cover-letter{
+        align-self: center;
+        width: 90%;
+    }
+
+    .page-about-me-cover-letter h1{
+        font-size: 20px;
+    }
+
+    .page-about-me-cover-letter p{
+        font-size: 10px;
+    }
     .informations{
+        max-width: 95%;
+        flex-direction: column-reverse;
         margin-left: 5vw;
+        margin-right: 0px;
         margin-top: 0px;
     }
 
@@ -171,20 +193,23 @@
         margin-right: 20px;
         max-width: 10vw;
     }
-    .popup {
-        display: flex;
-        justify-content: center;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 8px;
-        border-radius: 5px;
-        z-index: 1; 
-        pointer-events: none; 
-        font-size: small;
-        top: 110vh;
-        left: 55vw;
-        width: 30vw;
+    .informations-pop-up{
+        align-self: center;
+        max-width: 98%;
     }
+    .popup {
+      
+      max-width: 88%;
+      max-height: 400px;
+    }
+
+    .popup li {
+        font-size: 12px;
+    }
+    .informations-skills{
+        align-self: center;
+    }
+
+    
     
   }

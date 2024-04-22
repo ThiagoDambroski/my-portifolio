@@ -42,26 +42,41 @@ import App from "../assets/images/architecture-portfolio/App/App.png";
 import AppComponent from "../assets/images/architecture-portfolio/App/AppComponent.png";
 import HomeJSComponent from "../assets/images/architecture-portfolio/App/HomeComponent.png";
 
+//New Images
+import HomePage from "../assets/images/architecture-portfolio/HomePage.png";
+import AllProjects from "../assets/images/architecture-portfolio/allProjects.png";
+import AboutUs from "../assets/images/architecture-portfolio/aboutUs.png";
+import FQAOpen from "../assets/images/architecture-portfolio/FQAOpen.png";
+import Contacts from "../assets/images/architecture-portfolio/contatcts.png";
+import BigProjects from "../assets/images/architecture-portfolio/bigproject.png";
+import institucional from "../assets/images/architecture-portfolio/instucional.png";
+import WholePage from "../assets/images/architecture-portfolio/wholePage.png";
+
 //Icon Image
 import reactIcon from "../assets/images/icon/programs icon/react.png";
 
 const architectFrontEnd = {
   id: 2,
-  title: "Portfolio architect | React",
+  title: "Kasco WebSite | React",
   gitLink:
     "https://github.com/ThiagoDambroski/portifolio-claudio-manguinho-react",
+  youtubeID: "qvbN8-IIL-E",
+  videoTitle: "React Kasco Architectural Website Demo | Code Showcase",
   description:
-    "This portfolio offers a exploration of the code and components for an React-based web application," +
-    "specifically tailored for showcasing architectural projects. Within each section, you'll find an  breakdown of " +
-    "component codes, complete with corresponding images of these components.",
+    "This project entailed the development of a freelance website for an architecture company, " +
+    "aimed at showcasing their portfolio and essential information." +
+    "I crafted both the design and code from scratch. The website serves as a repository for the company's " +
+    "portfolio alongside pertinent details, seamlessly blending aesthetics with functionality." +
+    "(Some information is represented by placeholders to be filled in later.)",
   images: [
-    HomeComponent,
-    Page2,
-    AboutMe,
-    FQA,
-    ContactFooter,
-    ProjectsTypes,
-    App,
+    HomePage,
+    AllProjects,
+    AboutUs,
+    FQAOpen,
+    Contacts,
+    BigProjects,
+    institucional,
+    WholePage,
   ],
   type: 2, // TYPE 2 : FRONT ,
   navLink: "/frontEndProjectArchitectPortifolio",

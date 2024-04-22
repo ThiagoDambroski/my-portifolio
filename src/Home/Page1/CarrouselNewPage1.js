@@ -1,6 +1,7 @@
 import React from "react";
 import smallArrowLeft from "../../assets/images/icon/compact-left-arrow.png";
 import smallArrowRight from "../../assets/images/icon/compact-right-arrow.png";
+import { NavLink } from "react-router-dom";
 
 function CarrouselNewPage1({ item, index, setIndex, maxIndex, openLightbox }) {
   const project = item;
@@ -66,7 +67,9 @@ function CarrouselNewPage1({ item, index, setIndex, maxIndex, openLightbox }) {
           <h2>{project.title}</h2>
           <p>{project.description} </p>
         </div>
-        <button className="carrouselNewPage-button">See more </button>
+        <NavLink to={project.navLink}>
+          <button className="carrouselNewPage-button">See more</button>
+        </NavLink>
       </div>
     </>
   );

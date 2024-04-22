@@ -3,6 +3,7 @@ import { useState } from "react";
 import { projectData } from "../../ProjectData";
 import "./newPage1.css";
 import CarrouselNewPage1 from "./CarrouselNewPage1";
+import { NavLink } from "react-router-dom";
 
 function NewPage1({ openLightbox }) {
   const backEndProjects = projectData.filter((item) => item.type === 1);
@@ -13,7 +14,9 @@ function NewPage1({ openLightbox }) {
 
   return (
     <div className="newPage1-page">
-      <button className="newPage1-all-projects-button">All projects</button>
+      <NavLink to="/showCase">
+        <button className="newPage1-all-projects-button">All projects</button>
+      </NavLink>
 
       <div className="newPage1-front-end">
         <h1>Front End Projects</h1>
