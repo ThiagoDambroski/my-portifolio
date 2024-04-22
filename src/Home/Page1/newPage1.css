@@ -140,8 +140,15 @@
         font-size: 25px
     }
     .carrouselNewPage-images-multi img {
-        height: 100px;
+        width: 90%;
+        height: 120px;
     }
+    .carrouselNewPage-images-multi img:hover{
+        width: 92%;
+        height: 125px;
+         cursor: pointer;
+     }
+     
 
     .carrouselNewPage-desc h2 {
         
