@@ -180,8 +180,8 @@
     }
     .project-image {
     
-      max-width: 280px;
-      height: 280px;
+      max-width: 90vw;
+      height: 85vw;
     }
     .back-button {
         top: 5vh;
