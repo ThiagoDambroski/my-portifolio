@@ -106,8 +106,10 @@
 }
 
 .carrouselNewPage-desc p {
+    text-align: center;
     margin-top: 0px;
-    max-width: 80%;
+    max-width: 70%;
+    font-size: 0.9rem;
     
 }
 
@@ -150,8 +152,8 @@
 }
 
 .selfContainCarrousel-img{
-    width: 85vw;
-    height: 90vh;
+    width: 65vw;
+    height: 70vh;
     object-fit: cover;
     object-position: top;
     cursor: pointer;

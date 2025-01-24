@@ -31,7 +31,7 @@ function NewPage1({ openLightbox }) {
           
         >
           {fullStackProjects.map((item) => (
-            <div >
+            <div className="carousel-container" >
               <CarrouselNewPage1
                 item={item}
                 index={indexFull}
@@ -43,7 +43,7 @@ function NewPage1({ openLightbox }) {
           ))}
         </div>
       </div>
-
+ 
       <div className="newPage1-front-end">
         <TitleCode
         text={"const FontEndProjects:projects"}

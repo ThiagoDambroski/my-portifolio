@@ -28,12 +28,12 @@ function SquareIcon({ image, title, description, type }) {
       window.open("https://www.youtube.com/@thiagodambroski5666");
     }
   };
-
+  //
   return (
     <div className="square-icon" onClick={handleClick}>
       <img src={image} alt="icons" className="square-icon-image"/>
-      
       <p>{description}</p>
+      
     </div>
   );
 }
