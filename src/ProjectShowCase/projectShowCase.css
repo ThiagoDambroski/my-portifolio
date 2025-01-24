@@ -1,5 +1,5 @@
 .showCase-page{
-    min-height: 100vh;
+    min-height: 70vh;
 }
 
 .flex-toggle{
@@ -65,6 +65,9 @@
 
 @media only screen and (max-width: 600px) {
 
+    .showCase-page{
+        min-height: 60vh;
+    }
     
     .toggle-project{
         max-width: 85vw; 

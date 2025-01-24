@@ -1,27 +1,30 @@
 .labels {
-    display: flex;
-    flex-direction: column;
-    
-    
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+
 }
-.componentImage{
+
+.componentImage {
   width: 80vw;
 }
-.caroussel-images{
+
+.caroussel-images {
   display: flex;
   align-items: center;
 }
 
-.project-arrow{
+.project-arrow {
   max-width: 40px;
   max-height: 40px;
 }
 
-.project-arrow:hover{
+.project-arrow:hover {
   cursor: pointer;
 }
 
-.code-img{
+.code-img {
   width: 50vw;
   height: 100vh;
   object-fit: cover;
@@ -29,16 +32,52 @@
   margin-bottom: 5px;
   cursor: pointer;
 }
-.class-label{
+
+.class-label {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'code';
+  padding: 5px;
+  margin-bottom: 25px;
   cursor: pointer;
+  transition: all ease-in 0.5s;
 }
-.class-label-backgorund{
+
+
+
+.class-label:hover {
+  background-color: #383737;
+  color: rgb(86, 156, 214);
+}
+
+.class-label-ative {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  font-family: 'code';
+  padding: 5px 0px;
+  cursor: pointer;
+  background-color: #383737;
+  color: rgb(86, 156, 214);
+  margin-bottom: 0px;
+}
+
+.class-label-backgorund {
   width: 90vw;
   cursor: pointer;
   background-color: #535151;
 }
 
-.active-item{
+.center-title {
+  font-family: 'ibm';
+  font-size: 13px;
+  
+}
+
+.active-item {
   color: #000000;
   font-weight: bold;
 }
@@ -59,28 +98,30 @@
 .lightbox-content {
   max-width: 90%;
   max-height: 90%;
-  overflow: auto; 
+  overflow: auto;
   background-color: #3a3a3a;
   position: relative;
 
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #aaa #fff; /* For Firefox */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: #aaa #fff;
+  /* For Firefox */
 }
 
 .lightbox-content::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 .lightbox-content::-webkit-scrollbar-thumb {
-  background-color: #aaa; 
+  background-color: #aaa;
   border-radius: 4px;
 }
 
 .lightbox-content::-webkit-scrollbar-track {
-  background-color: #fff; 
+  background-color: #fff;
 }
 
-.lightbox-image{
+.lightbox-image {
   max-width: 80vw;
 }
 
@@ -96,91 +137,104 @@
 
 
 
-.labels label {
-    display: flex;
-    justify-content: center;
-    font-size: 30px;
-    font-family: 'code';
-    padding-bottom: 30px;
-}
- 
+
 .method-table {
+  width: 90%;
   background-color: #535151;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 15px;   
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .method-table h2 {
   font-family: 'IBM';
+
 }
 
 table {
-    border-collapse: collapse;
-    font-family: 'code';
-    text-align: center;
-    max-width: 80vw;
-    margin-bottom: 20px;
-    background-color: #333;
-    color: #fff;
+  border-collapse: collapse;
+  font-family: 'code';
+  text-align: center;
+  max-width: 80vw;
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+
+th {
+  background-color: #444;
+  color: #000000;
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #252525;
+  border-right: 1px solid #252525;
+}
+
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #252525;
+  border-right: 1px solid #252525
+}
+
+
+tr:nth-child(even) {
+  background-color: #444;
+}
+
+tr:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .center-title {
+    margin-top: 10px;
+    font-size: 12px;
   }
-  
+
+  .labels label {
+    font-size: 15px;
+  }
+
+
+  .method-table h2 {
+    font-size: 13px;
+  }
+
+  .code-img {
+    width: 60vw;
+    height: 50vh;
+  }
+
+  .project-arrow {
+    max-width: 15px;
+    max-height: 15px;
+  }
 
   th {
-    background-color: #444;
-    color: #000000;
-    text-align: center;
-    padding: 8px;
-    border-bottom: 1px solid #252525; 
-    border-right: 1px solid #252525; 
+    font-size: 5px;
   }
-  
 
   td {
-    padding: 8px;
-    border-bottom: 1px solid #252525; 
-    border-right: 1px solid #252525
-  }
-  
-
-  tr:nth-child(even) {
-    background-color: #444;
-  }
-  
-  tr:hover {
-    background-color: #555;
+    overflow: scroll;
+    font-size: 5px;
+    max-width: 40vw;
   }
 
-  @media only screen and (max-width: 600px) {
-    .code-img{
-      width: 80vw;
-      height: 70vh;
-    }
-
-    .project-arrow {
-      max-width: 25px;
-      max-height: 25px;
-    }
-    
-
-    td{
-      overflow: scroll;
-      
-      max-width: 40vw;
-    }
-
-    .lightbox-content::-webkit-scrollbar {
-      width: 0px; 
-      height: 0px;
-    }
-   
-
-    .lightbox-image{
-      
-      max-width: 105vh;
-    }
-
-    
+  .lightbox-content::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
   }
+
+
+  .lightbox-image {
+
+    max-width: 105vh;
+  }
+
+
+}

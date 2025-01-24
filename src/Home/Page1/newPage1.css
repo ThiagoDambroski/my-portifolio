@@ -1,120 +1,135 @@
-.newPage1-page{
+.newPage1-page {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.newPage1-all-projects-button{
+.newPage1-all-projects-button {
+    width: 400px;
     padding: 15px;
-    font-size: 20px;
+    font-size: 22px;
     border-radius: 5px;
+    margin-bottom: 10px;
     color: white;
     background-color: black;
     border: 1px solid rgb(131, 130, 130);
     font-family: 'IBM';
-    transition: all 0.5s ease-in ;
+    transition: all 0.5s  ease-in-out;
 }
 
-.newPage1-all-projects-button:hover{
+.newPage1-all-projects-button:hover {
     cursor: pointer;
     color: black;
     border-color: black;
     background-color: white;
 }
-.newPage1-front-end{
+
+.newPage1-front-end {
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
-   
+
 }
 
-.newPage1-front-end h1{
-    font-family: 'IBM';
-    color:gold
+.newPage1-syntax-highlighter {
+    width:85vw;
+    
 }
+
+.newPage1-syntax-highlighter span {
+    font-size: 30px;
+}
+
 /*Carrousel*/
 
 .carousel-container {
     display: flex;
-   
-    transition: transform 0.5s ease; /* Add transition property */
-    
+
+    transition: transform 0.5s ease;
+    /* Add transition property */
+
     max-width: 97vw;
-  }
-  
-  .carousel-item {
+}
+
+.carousel-item {
     display: flex;
     width: 50vw;
     flex: 0 0 100%;
-    
-   
-  }
 
-.carrouselNewPage{
-    
+
+}
+
+.carrouselNewPage {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.carrouselNewPage-images{
-    
+
+.carrouselNewPage-images {
+
     display: flex;
     justify-content: center;
-    
-}
-.carrouselNewPage-images-multi{
-    
-    display: flex;
-   justify-content: center;
-    flex-wrap: wrap;
-    
+
 }
 
-.carrouselNewPage-images-multi img{
-    width: 43%;
-    height: 250px;
+.carrouselNewPage-images-multi {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.carrouselNewPage-images-multi img {
+    width: 47%;
+    height: 50%;
     margin-left: 5px;
     margin-bottom: 5px;
     transition: all 0.5s ease-in;
 }
-.carrouselNewPage-images-multi img:hover{
-   width: 44%;
-   height: 255px;
+
+.carrouselNewPage-images-multi img:hover {
+    width: 48%;
+    height: 51%;
     cursor: pointer;
 }
 
-.carrouselNewPage-desc{
+.carrouselNewPage-desc {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: 'IBM';
+    
 }
 
 .carrouselNewPage-desc p {
     margin-top: 0px;
     max-width: 80%;
+    
 }
 
-.carrouselNewPage-arrow{
-    
+.carrouselNewPage-arrow {
+
     align-self: center;
     width: 55px;
     height: 55px;
 }
 
-.carrouselNewPage-arrow:hover{
+.carrouselNewPage-arrow:hover {
     cursor: pointer;
 }
-.carrouselNewPage-button{
+
+.carrouselNewPage-button {
     margin-bottom: 15px;
     padding: 10px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 5px;
     font-family: 'IBM';
-    color:white;
+    color: white;
     background-color: black;
     border: 1px solid white;
     transition: all 0.5s ease-in
@@ -127,37 +142,96 @@
     background-color: white;
 }
 
+/* new Carrousel*/
+
+.selfContainCarrousel-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.selfContainCarrousel-img{
+    width: 85vw;
+    height: 90vh;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+}
+
+.circles-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .circle.active {
+    background-color: #333;
+  }
+
+
 @media only screen and (max-width: 800px) {
     .newPage1-page {
         max-width: 99%;
     }
+
     .newPage1-all-projects-button {
+        width: 60vw;
         padding: 10px;
-        font-size: 15px;
- 
+        font-size: 12px;
+
     }
+
     .newPage1-front-end h1 {
         font-size: 25px
     }
+
     .carrouselNewPage-images-multi img {
         width: 90%;
         height: 120px;
     }
-    .carrouselNewPage-images-multi img:hover{
+
+    .carrouselNewPage-images-multi img:hover {
         width: 92%;
         height: 125px;
-         cursor: pointer;
-     }
-     
+        cursor: pointer;
+    }
+
 
     .carrouselNewPage-desc h2 {
-        
-        max-width: 85%;
-        font-size: 18px
+
+        max-width: 90%;
+        font-size: 13px
     }
 
     .carrouselNewPage-desc p {
-        font-size: 12px;
+        font-size: 8px;
+        max-width: 90%;
+    }
+
+    .carrouselNewPage-button{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    .newPage1-syntax-highlighter {
+        width:85vw;
+        
+    }
+    
+    .newPage1-syntax-highlighter span {
+        font-size: 15px;
+    }
+    .selfContainCarrousel-img{
+        max-width: 100%;
+        max-height: 200px;
     }
 
 }

@@ -4,22 +4,51 @@ import { projectData } from "../../ProjectData";
 import "./newPage1.css";
 import CarrouselNewPage1 from "./CarrouselNewPage1";
 import { NavLink } from "react-router-dom";
+import TitleCode from "./TitleCode";
+
 
 function NewPage1({ openLightbox }) {
+
   const backEndProjects = projectData.filter((item) => item.type === 1);
   const frontEndProjects = projectData.filter((item) => item.type === 2);
+  const fullStackProjects = projectData.filter((item) => item.type === 3)
 
   const [indexFront, setIndexFront] = useState(0);
   const [indexBack, setIndexBack] = useState(0);
+  const [indexFull,setIndexFull] = useState(0)
 
   return (
     <div className="newPage1-page">
       <NavLink to="/showCase">
         <button className="newPage1-all-projects-button">All projects</button>
       </NavLink>
+      <div className="newPage1-front-end">
+        <TitleCode
+        text={"const FullStackProjects:projects"}
+        lineNumber={1}
+        />
+      <div
+          
+        >
+          {fullStackProjects.map((item) => (
+            <div >
+              <CarrouselNewPage1
+                item={item}
+                index={indexFull}
+                setIndex={setIndexFull}
+                maxIndex={fullStackProjects.length - 1}
+                openLightbox={openLightbox}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
 
       <div className="newPage1-front-end">
-        <h1>Front End Projects</h1>
+        <TitleCode
+        text={"const FontEndProjects:projects"}
+        lineNumber={2}
+        />
         <div
           className="carousel-container"
           style={{ transform: `translateX(-${indexFront * 100}%)` }}
@@ -37,8 +66,12 @@ function NewPage1({ openLightbox }) {
           ))}
         </div>
       </div>
+
       <div className="newPage1-front-end">
-        <h1>Back End Projects</h1>
+        <TitleCode
+        text={"const BackEndProjects:projects"}
+        lineNumber={3}
+        />
         <div
           className="carousel-container"
           style={{ transform: `translateX(-${indexBack * 100}%)` }}

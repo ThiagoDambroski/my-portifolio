@@ -11,6 +11,7 @@ function ProjectsShowCase({ projects }) {
 
   const backEndProjects = projects.filter((item) => item.type === 1);
   const frontEndProjects = projects.filter((item) => item.type === 2);
+  const fullStackProjects = projects.filter((item) => item.type === 3)
 
   const [activeProject, setActiveProject] = useState(1);
 
@@ -27,10 +28,16 @@ function ProjectsShowCase({ projects }) {
           activeProject={activeProject}
           setActiveProject={setActiveProject}
         />
+        <ToggleButton
+          title="Full Stack"
+          activeProject={activeProject}
+          setActiveProject={setActiveProject}
+        />
       </div>
       <div className="showCase-content">
         {activeProject === 0 && <ToggleProject projects={backEndProjects} />}
         {activeProject === 1 && <ToggleProject projects={frontEndProjects} />}
+        {activeProject === 3 && <ToggleProject projects={fullStackProjects} />}
       </div>
     </div>
   );

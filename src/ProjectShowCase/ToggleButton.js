@@ -8,11 +8,11 @@ function ToggleButton({title,activeProject,setActiveProject}) {
 
 
   useEffect(() => {
-    setActive(activeProject === (title === 'Back-End' ? 0 : 1));
+    setActive(activeProject === (title === 'Back-End' ? 0 : title === 'Front-End' ? 1 : 3));
   }, [activeProject]);
 
   const handleClick = () => {
-    setActiveProject(title === 'Back-End' ? 0 : 1);
+    setActiveProject(title === 'Back-End' ? 0 : title === 'Front-End' ? 1 : 3);
   }
 
 

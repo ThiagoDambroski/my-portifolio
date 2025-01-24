@@ -1,7 +1,17 @@
-
-
 .project-content-content {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.full-stack-type-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'IBM';
+}
+
+@media only screen and (max-width: 800px) {
+    .full-stack-type-title {
+        font-size: 15px;
+    }
 }

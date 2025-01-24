@@ -9,6 +9,7 @@ function ToggleProject({projects}) {
       {
         projects.map((item) => 
           <div className='toggle-project'>
+            
             <img src={item.iconImage} style={{maxWidth: '10%'}} alt='image-icon'/>
             <NavLink to={item.navLink}><span>{item.title}</span></NavLink>
             <a href={item.gitLink} className='github-link' target='_blank' rel='noreferrer'>

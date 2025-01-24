@@ -19,7 +19,7 @@ function HomePage() {
       } else {
         setStopCursor(true);
       }
-    }, 100);
+    }, 70);
 
     return () => clearTimeout(timer);
   }, [currentIndex, text]);

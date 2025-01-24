@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import smallLeftArrow from '../../assets/images/icon/compact-left-arrow.png'
+import smallRightArrow from '../../assets/images/icon/compact-right-arrow.png'
 
-function SkillPopup({ skill, isVisible }) {
+function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
   const skillInfos = {
     react: [
       "Components",
@@ -14,6 +16,7 @@ function SkillPopup({ skill, isVisible }) {
       "UseEffect",
       "Fetch API Data",
       "Fetch Errors",
+      "Electron",
       "Local Storage",
       "React Routes",
       "Code Splitting",
@@ -42,13 +45,19 @@ function SkillPopup({ skill, isVisible }) {
       "Error Handling",
     ],
 
-    html: ["HTML5 tags", "HTML5 Structure", "HTML5 Entity", "HTML5 Forms"],
+    html: ["HTML5 tags", "HTML5 Structure", "HTML5 Entity", 
+      "HTML5 Forms","HTML5 Audio/Video","HTML5 Web Storage",
+      ],
 
     css: [
       "Bootstrap 5",
       "CSS Selectors",
       "CSS Box Model",
       "CSS Layouts",
+      "CSS Grid",
+      "CSS Transitions",
+      "CSS Filters",
+      "CSS Variables",
       "CSS Typography",
       "CSS Positioning",
       "CSS Media Queries",
@@ -61,6 +70,11 @@ function SkillPopup({ skill, isVisible }) {
       "DOM Manipulation",
       "DOM Events",
       "Event Handling",
+      "ES6 Features",
+      "Promises",
+      "Fetch",
+      "JavaScript Classes",
+      "JavaScript Modules",
       "Async Programming",
       "JSON",
       "Arrays and Objects",
@@ -85,6 +99,17 @@ function SkillPopup({ skill, isVisible }) {
       "Pull Requests",
       "Git Workflows",
     ],
+    typeScript: [
+    "React + TypeScript",
+    "Basic Syntax",
+    "Type Annotations",
+    "Interfaces",
+    "Enums",
+    "Generics",
+    "Type Inference",
+    "Union and Intersection Types",
+    "Decorators"
+  ],
   };
 
   const [skillPage, setSkillPage] = useState(0);
@@ -109,11 +134,17 @@ function SkillPopup({ skill, isVisible }) {
 
   if (!isVisible) return null;
 
+  
+
   return (
     <div className="popup">
       <ul>
         <div className="skill-title">
-          <p>{skill}</p>
+          <div className="skill-title-head">
+            <img src={smallLeftArrow} onClick={previousSkill}/>
+            <p>{skill}</p>
+            <img src={smallRightArrow} onClick={nextSkill}/>
+          </div>
         </div>
         <br />
         {totalSkills > 11 ? (

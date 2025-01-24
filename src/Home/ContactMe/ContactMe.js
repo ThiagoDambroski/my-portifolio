@@ -22,13 +22,13 @@ function ContactMe() {
         <SquareIcon
           image={telephone}
           title="Telphone"
-          description="+81 99798-9475"
+          description="+351 927 267 839"
           type="tel"
         />
         <SquareIcon
           image={gitHub}
           title="Git Hub"
-          description="github.com/ThiagoDambroski"
+          description="ThiagoDambroski"
           type="git"
         />
         <SquareIcon
@@ -40,7 +40,7 @@ function ContactMe() {
         <SquareIcon
           image={linkedin}
           title="Linkedin"
-          description="thiago-dambroski-516a43211/"
+          description="thiago-dambroski"
           type="linkedin"
         />
         <SquareIcon

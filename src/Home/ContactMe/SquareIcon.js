@@ -6,7 +6,7 @@ function SquareIcon({ image, title, description, type }) {
       window.location.href = `mailto:${description}`;
     }
     if (type === "tel") {
-      const phoneNumber = "5581997989475";
+      const phoneNumber = "351927267839";
       window.open(
         `https://api.whatsapp.com/send?phone=${phoneNumber}`,
         "_blank"
@@ -31,8 +31,8 @@ function SquareIcon({ image, title, description, type }) {
 
   return (
     <div className="square-icon" onClick={handleClick}>
-      <img src={image} alt="icons" />
-      <span className="square-title">{title}</span>
+      <img src={image} alt="icons" className="square-icon-image"/>
+      
       <p>{description}</p>
     </div>
   );

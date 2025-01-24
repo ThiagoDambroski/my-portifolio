@@ -5,6 +5,7 @@ import "./projectpage.css";
 import gitHub from "../../assets/images/icon/programs icon/github-icon.png";
 import smallRightArrow from "../../assets/images/icon/small-right-arrow.png";
 import smallLeftArrow from "../../assets/images/icon/small-left-arrow.png";
+import backArrow from "../../assets/images/icon/next.png"
 
 function ProjectPage({ item }) {
   const navigate = useNavigate();
@@ -55,11 +56,11 @@ function ProjectPage({ item }) {
             X
           </span>
           <div className="lightbox-content">
-            <img src={lightboxOpen.image} className="lightbox-image" />
+            <img src={lightboxOpen.image}  className="lightbox-image" />
           </div>
         </div>
       )}
-      <button onClick={goBack} className="back-button" />
+      <img src={backArrow} onClick={goBack} className="back-button"/>
       <div className="project-title">
         <a href={item.gitLink} target="_blank">
           <img src={gitHub} />

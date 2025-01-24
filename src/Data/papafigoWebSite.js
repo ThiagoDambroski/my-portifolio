@@ -34,7 +34,7 @@ const papafigoWebSite = {
   navLink: "/frontEndProjectPapafigo",
   iconImage: reactIcon,
   informationPage: {
-    siteLink: "https://github.com/ThiagoDambroski/papafigo-website",
+    siteLink: "https://thiagodambroski.github.io/papafigo-website/",
   },
 };
 

@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
 import CarousselImages from "../Classes/CarousselImages";
+import TitleCode from "../../../Home/Page1/TitleCode";
+import gitIcon from "../../../assets/images/icon/contact icon/github.png"
+
 //classes.css
-function Components({ item }) {
+function Components({ item}) {
   const informationPage = item.informationPage;
   /*
   const [isListVisible, setListVisible] = useState(
@@ -30,30 +33,44 @@ function Components({ item }) {
 
   return (
     <div className="labels">
-      <a
+      {informationPage.siteLink && 
+        <a
         href={informationPage.siteLink}
         target="_blank"
         className="project-content-button"
       >
         View yourself
       </a>
+      }
+      
       <div className="project-info">
         <p>{item.description}</p>
       </div>
       <div className="project-video">
-        <h2>Video Showcases</h2>
-        <iframe
-          className="iframe"
-          src={`https://www.youtube.com/embed/${item.youtubeID}`}
-          title={item.videoTitle}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+        <div className="title-code-follow-up">
+          <TitleCode
+            text={"const VideoShowcase:video"}
+          />
+          <iframe
+            className="iframe"
+            src={`https://www.youtube.com/embed/${item.youtubeID}`}
+            title={item.videoTitle}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+        
       </div>
-
-      <a href={item.gitLink} target="_blank" className="project-content-button">
-        Full Code
-      </a>
+      {item.type !== 3 && 
+        <div className="project-content-button-code" >
+          <img src={gitIcon}/>
+          <a href={item.gitLink} target="_blank" >
+          Full Code
+          </a>
+        </div>
+        
+      }
+      
       {/*
       <div className="center-title">
         <h1>Components:</h1>
