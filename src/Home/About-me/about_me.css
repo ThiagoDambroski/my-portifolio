@@ -55,7 +55,8 @@
 .photo {
     margin-left: 25px;
     border-radius: 10px;
-    max-width: 450px;
+    max-width: 500px;
+    
 }
 
 .informations {
@@ -71,7 +72,7 @@
 }
 
 .informations-skills {
-    width: 55%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +152,7 @@
     z-index: 1;
 
     width: 450px;
-    height: 450px;
+    height: 95%;
 }
 
 .popup ul {

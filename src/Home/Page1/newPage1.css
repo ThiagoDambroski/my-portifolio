@@ -108,8 +108,8 @@
 .carrouselNewPage-desc p {
     text-align: center;
     margin-top: 0px;
-    max-width: 70%;
-    font-size: 0.9rem;
+    max-width: 65%;
+    font-size: 1rem;
     
 }
 
@@ -126,12 +126,12 @@
 
 .carrouselNewPage-button {
     margin-bottom: 15px;
-    padding: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px 40px;
     border-radius: 5px;
     font-family: 'IBM';
     color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
     background-color: black;
     border: 1px solid white;
     transition: all 0.5s ease-in

@@ -114,8 +114,10 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
 
   const [skillPage, setSkillPage] = useState(0);
 
+  const numberPerPage = 15
+
   const totalSkills = skillInfos[skill].length;
-  const totalPages = Math.ceil(totalSkills / 11);
+  const totalPages = Math.ceil(totalSkills / numberPerPage);
 
   const nextPage = () => {
     const nextPageValue = skillPage + 1;
@@ -147,10 +149,10 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
           </div>
         </div>
         <br />
-        {totalSkills > 11 ? (
+        {totalSkills > numberPerPage ? (
           <>
             {skillInfos[skill]
-              .slice(11 * skillPage, 11 * (skillPage + 1))
+              .slice(11 * skillPage, numberPerPage * (skillPage + 1))
               .map((item) => (
                 <li>{item}</li>
               ))}
