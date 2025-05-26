@@ -150,36 +150,45 @@ useEffect(() => {
   }, []);
 
   // Typing effect logic
-  useEffect(() => {
-    if (startTyping && currentIndex < fullText.length) {
-      const timeoutId = setTimeout(() => {
-        setDisplayText((prevText) => prevText + fullText[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, -1); // Typing speed
-      return () => clearTimeout(timeoutId);
-    }
-  }, [currentIndex, fullText, startTyping]);
+  const charactersPerBatch = 5; // Number of characters to type at once
+const typingSpeed = 1; // Delay in milliseconds
+
+useEffect(() => {
+  if (startTyping && currentIndex < fullText.length) {
+    const timeoutId = setTimeout(() => {
+      const nextIndex = Math.min(currentIndex + charactersPerBatch, fullText.length);
+      setDisplayText((prevText) => prevText + fullText.slice(currentIndex, nextIndex));
+      setCurrentIndex(nextIndex);
+    }, typingSpeed);
+    return () => clearTimeout(timeoutId);
+  }
+}, [currentIndex, fullText, startTyping]);
 
   return (
     <div className="page-about-me" ref={aboutMeRef}>
-      <img src={thiago} className="photo" alt="selfie" />
-      <div className="page-about-me-cover-letter">
-        <h1>About Me</h1>
-        <div className="page-about-me-text-background">
-          <SyntaxHighlighter
-              language="javascript"
-              style={vscDarkPlus}
-              wrapLines={true}
-              wrapLongLines={true}
-              showLineNumbers={true}
-              className="syntax-highlighter" // Use the CSS class to style the SyntaxHighlighter
-              
-            >
-              {displayText}
-            </SyntaxHighlighter>
+      <div className="page-about-me-container-info">
+        <img src={thiago} className="photo" alt="selfie" />
+        <div className="page-about-me-cover-letter">
+          <h1>About Me</h1>
+          <div className="page-about-me-text-background">
+            <SyntaxHighlighter
+                language="javascript"
+                style={vscDarkPlus}
+                wrapLines={true}
+                wrapLongLines={true}
+                showLineNumbers={true}
+                className="syntax-highlighter" // Use the CSS class to style the SyntaxHighlighter
+                
+              >
+                {displayText}
+              </SyntaxHighlighter>
+          </div>
+          
         </div>
-        
       </div>
+
+      
+
       <div className="informations">
         <div className="informations-pop-up">
           <SkillPopup skill={"react"} isVisible={hoverSkill === "react"} nextSkill={handleNextSkill} previousSkill={handlePreviousSkill} />

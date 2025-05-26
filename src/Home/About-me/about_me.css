@@ -1,290 +1,246 @@
+@charset "UTF-8";
 .page-about-me {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.page-about-me-cover-letter {
-    width: 55%;
-
-    display: flex;
+.page-about-me-container-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 600px;
+}
+@media only screen and (max-width: 600px) {
+  .page-about-me-container-info {
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  }
 }
-
-.page-about-me-cover-letter h1 {
-    font-family: 'IBM';
-    margin-bottom: 0px;
-
+.page-about-me-container-info .photo {
+  margin-left: 25px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  width: 35%;
 }
-
-.page-about-me-text-background {
+.page-about-me-container-info .page-about-me-cover-letter {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .page-about-me-container-info .page-about-me-cover-letter {
     width: 100%;
-    /* Full width of the parent container */
-    height: 100%;
-    /* Full height of the parent container */
-    max-width: 100%;
-    /* Ensure it doesn’t exceed parent width */
-    max-height: 100%;
-    /* Ensure it doesn’t exceed parent height */
-    overflow: hidden;
-    /* Hide overflow to avoid scrollbars */
-    box-sizing: border-box;
-    /* Include padding and border in the element’s total width and height */
+  }
 }
-
-.syntax-highlighter {
-    width: 100%;
-    height: 550px;
-    overflow: auto;
-    white-space: pre-wrap;
-    /* Preserve whitespace and wrap long lines */
-    box-sizing: border-box;
+.page-about-me-container-info .page-about-me-cover-letter h1 {
+  font-family: "IBM";
+  font-weight: 400;
+  margin-bottom: 0px;
 }
-
-
-.page-about-me-code-about {
-    margin-top: 0px;
-    padding-top: 0px;
+.page-about-me-container-info .page-about-me-cover-letter .page-about-me-text-background {
+  width: 100%;
+  /* Full width of the parent container */
+  height: 100%;
+  /* Full height of the parent container */
+  max-width: 100%;
+  /* Ensure it doesn’t exceed parent width */
+  max-height: 100%;
+  /* Ensure it doesn’t exceed parent height */
+  overflow: hidden;
+  /* Hide overflow to avoid scrollbars */
+  box-sizing: border-box;
+  /* Include padding and border in the element’s total width and height */
 }
-
-.photo {
-    margin-left: 25px;
-    border-radius: 10px;
-    max-width: 500px;
-    
+.page-about-me-container-info .page-about-me-cover-letter .syntax-highlighter {
+  width: 100%;
+  overflow: auto;
+  white-space: pre-wrap;
+  /* Preserve whitespace and wrap long lines */
+  box-sizing: border-box;
+}
+.page-about-me-container-info .page-about-me-cover-letter .page-about-me-code-about {
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .informations {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: start;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: start;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
-
-.informations-skills {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.informations .informations-skills {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.skills {
-    margin-bottom: 5vh;
-    display: flex;
-    justify-content: center;
-
+.informations .skills {
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  /*.code-small {
+  font-family: 'IBM';
+  font-weight: lighter;
+  font-size: 20px;
+  }
+  */
 }
-
-/*.code-small {
-    font-family: 'IBM';
-    font-weight: lighter;
-    font-size: 20px;
+.informations .skills .code {
+  font-family: "IBM";
+  font-weight: lighter;
 }
-*/
-.code {
-    font-family: 'IBM';
-    font-weight: lighter;
-
+.informations .popup {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  z-index: 1;
+  width: 450px;
+  height: 95%;
 }
-
-.icons {
-
-    max-width: 450px;
-    display: flex;
-    flex-wrap: wrap;
-
-
+.informations .popup ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: "IBM";
+  font-weight: normal;
 }
-
-.row {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: space-around;
-
-    margin-bottom: 5vh;
-
-
+.informations .popup li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  list-style: none;
+  font-family: "IBM";
 }
-
-
-.program-icon {
-
-    margin-right: -20px;
-    max-width: 90px;
-    transition: transform 0.15s ease-in-out, brightness 0.15s ease-in-out;
-
+@media only screen and (max-width: 600px) {
+  .informations .popup li {
+    font-size: 0.7rem;
+  }
 }
-
-.program-icon:hover {
-    cursor: pointer;
+.informations .popup .skill-title {
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
 }
-
-.program-icon:last-child {
-    margin-right: 0px;
+.informations .popup .skill-title .skill-title-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.pressed {
-    transform: scale(0.90);
-
-    filter: brightness(0.7);
-
+.informations .popup .skill-title .skill-title-head img {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
 }
-
-.popup {
-    display: flex;
-    justify-content: center;
-
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 8px;
-    border-radius: 5px;
-    z-index: 1;
-
-    width: 450px;
-    height: 95%;
+.informations .popup .skill-title .skill-title-head .cursorPointer:hover {
+  cursor: pointer;
 }
-
-.popup ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    font-family: 'IBM';
-    font-weight: normal;
+.informations .popup .skill-title p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
-.popup li {
-
-    font-size: 18px;
-    margin-bottom: 10px;
-    list-style: none;
-    font-family: 'IBM';
+.informations .icons {
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.skill-title {
-    display: flex;
-
-    justify-content: center;
-    text-transform: capitalize;
+.informations .icons .row {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5vh;
 }
-
-.skill-title-head {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.informations .icons .row .program-icon {
+  max-width: 20%;
+  transition: transform 0.15s ease-in-out, brightness 0.15s ease-in-out;
 }
-
-.skill-title-head img {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
+@media only screen and (max-width: 600px) {
+  .informations .icons .row .program-icon {
+    max-width: 40%;
+  }
 }
-
-.skill-title p {
-    margin-top: 0px;
-    margin-bottom: 0px;
-
+.informations .icons .row .program-icon:hover {
+  cursor: pointer;
 }
-
-.cursorPointer:hover {
-    cursor: pointer;
+.informations .icons .row .program-icon.pressed {
+  transform: scale(0.8);
+  filter: brightness(0.6);
 }
 
 @media only screen and (max-width: 1081px) {
-    .page-about-me {
-        /*new*/
-
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-
-    }
-
-    .syntax-highlighter {
-        font-size: 5px;
-    }
-
-
-
-    .react-syntax-highlighter-line-number {
-        width: 10px;
-    }
-
-    .photo {
-        margin-left: 0px;
-        align-self: center;
-        max-width: 250px;
-    }
-
-    .page-about-me-cover-letter {
-        align-self: center;
-        width: 90%;
-    }
-
-    .page-about-me-cover-letter h1 {
-        font-size: 20px;
-    }
-
-    .page-about-me-cover-letter p {
-        font-size: 10px;
-    }
-
-    .informations {
-        max-width: 95%;
-        flex-direction: column-reverse;
-        margin-left: 5vw;
-        margin-right: 0px;
-        margin-top: 0px;
-    }
-
-    .skills {
-        width: 35vw;
-        margin-bottom: 0vw;
-    }
-
-    .code {
-        font-size: larger;
-    }
-
-    .program-icon {
-        margin-right: 20px;
-        max-width: 10vw;
-
-    }
-
-
-
-    .informations-pop-up {
-        align-self: center;
-        max-width: 98%;
-    }
-
-    .popup {
-
-        max-width: 88%;
-        max-height: 400px;
-    }
-
-    .popup li {
-        font-size: 12px;
-    }
-
-    .informations-skills {
-        align-self: center;
-    }
-
-
-
-}
+  .page-about-me {
+    /*new*/
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  .syntax-highlighter {
+    font-size: 5px;
+  }
+  .react-syntax-highlighter-line-number {
+    width: 10px;
+  }
+  .photo {
+    margin-left: 0px;
+    align-self: center;
+    max-width: 250px;
+  }
+  .page-about-me-cover-letter {
+    align-self: center;
+    width: 90%;
+  }
+  .page-about-me-cover-letter h1 {
+    font-size: 20px;
+  }
+  .page-about-me-cover-letter p {
+    font-size: 10px;
+  }
+  .informations {
+    max-width: 95%;
+    flex-direction: column-reverse;
+    margin-left: 5vw;
+    margin-right: 0px;
+    margin-top: 0px;
+  }
+  .skills {
+    width: 35vw;
+    margin-bottom: 0vw;
+  }
+  .code {
+    font-size: larger;
+  }
+  .program-icon {
+    margin-right: 20px;
+    max-width: 10vw;
+  }
+  .informations-pop-up {
+    align-self: center;
+    max-width: 98%;
+  }
+  .popup {
+    max-width: 88%;
+    max-height: 400px;
+  }
+  .popup li {
+    font-size: 12px;
+  }
+  .informations-skills {
+    align-self: center;
+  }
+}/*# sourceMappingURL=about_me.css.map */
