@@ -1,297 +1,164 @@
-import React, { useState,useEffect, useRef } from "react";
-import "./about_me.css";
+import React, { useEffect, useState } from "react";
+import "./about_me.scss";
 import thiago from "../../assets/images/thiago.jpg";
+
 import reactIcon from "../../assets/images/icon/programs icon/react.png";
-
 import javaIcon from "../../assets/images/icon/programs icon/java.png";
-
 import springIcon from "../../assets/images/icon/programs icon/spring-icon.png";
-
 import phytonIcon from "../../assets/images/icon/programs icon/phytonIcon.png";
-
 import htmlIcon from "../../assets/images/icon/programs icon/html.png";
-
 import cssIcon from "../../assets/images/icon/programs icon/css.png";
-
 import jsIcon from "../../assets/images/icon/programs icon/js.png";
-
 import mySqlIcon from "../../assets/images/icon/programs icon/mysql.png";
-
 import gitIcon from "../../assets/images/icon/programs icon/git.png";
-
-import SkillPopup from "./SkillPopup";
-import tsIcon from "../../assets/images/icon/programs icon/ts.png"
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vsDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import tsIcon from "../../assets/images/icon/programs icon/ts.png";
 
 function AboutMe() {
-  const [generalActive, setGeneralActive] = useState("react");
+  const [selectedSkill, setSelectedSkill] = useState("react");
+  const [abilityPage, setAbilityPage] = useState(0);
 
-  const [hoverSkill, setHoverSkill] = useState("react");
-
-  const skillsString = ["react","java","spring","html","css","javaScript","typeScript","phyton","mysql","git"]
-
-  const handleClick = (skill) => {
-    setHoverSkill(skill);
-    setGeneralActive(skill);
+  const skills = {
+    react: { icon: reactIcon, abilities: ["Hooks", "Context", "Reusable UI"] },
+    java: { icon: javaIcon, abilities: ["OOP", "Collections"] },
+    spring: { icon: springIcon, abilities: ["APIs", "Security"] },
+    html: { icon: htmlIcon, abilities: ["Semantic HTML"] },
+    css: { icon: cssIcon, abilities: ["Flexbox", "Grid"] },
+    javaScript: { icon: jsIcon, abilities: ["Async", "DOM"] },
+    typeScript: { icon: tsIcon, abilities: ["Types", "Interfaces"] },
+    phyton: { icon: phytonIcon, abilities: ["Scripting"] },
+    mysql: { icon: mySqlIcon, abilities: ["Queries"] },
+    git: { icon: gitIcon, abilities: ["Version Control"] }
   };
 
-  const handleNextSkill = () => {
-    const skillIndex = skillsString.findIndex(skill => skill === hoverSkill);
-    const newSkill = skillsString[skillIndex + 1] || skillsString[0]; 
-    setHoverSkill(newSkill);
-    setGeneralActive(newSkill);
-  };
+  const abilitiesPerPage = 5;
+  const currentAbilities = skills[selectedSkill].abilities;
+  const totalAbilityPages = Math.ceil(currentAbilities.length / abilitiesPerPage);
 
-  const handlePreviousSkill = () => {
-    const skillIndex = skillsString.findIndex(skill => skill === hoverSkill)
-    const newSkill = skillsString[skillIndex - 1] || skillsString[skillsString.length - 1]
-    setHoverSkill(newSkill);
-    setGeneralActive(newSkill);
-  }
-
-  /*typeWriteEffect*/
-  const [displayText, setDisplayText] = useState(""); // Handle the typed effect
-  const [currentIndex, setCurrentIndex] = useState(0); // For tracking typing index
-  const [startTyping, setStartTyping] = useState(false); // Control when typing starts
-
-  const [maxLength, setMaxLength] = useState(80); 
-  const [textToUse,setTextToUse] = useState('laptop')
-
-
-useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth <= 700) { 
-      setMaxLength(50);
-      setTextToUse('celphone') 
-    } else {
-      setMaxLength(80); 
-      setTextToUse('laptop')
-    }
-  };
-
-  handleResize(); 
-  window.addEventListener("resize", handleResize);
-
-  return () => window.removeEventListener("resize", handleResize);
-}, []);
-
-
-  function insertLineBreaks(text, maxLength) {
-    const regex = new RegExp(`(.{1,${maxLength}})(\\s|$)`, 'g');
-    return  textToUse === 'laptop' ? text.match(regex).join('"+\n      "') : text.match(regex).join('"+\n"');
-  }
-  
-  const longText = "From a young age, I've been captivated by the endless possibilities of technology, driving my passion for IT. My curiosity in creating websites, programs, and games has fueled my journey in this field. As a student, I'm eager to further develop my skills and gain invaluable professional experience. In addition to my studies, I've been actively working as a freelance front-end and full-stack developer, gaining hands-on experience and applying my skills in real-world projects. In addition to my technical skills, I am an excellent collaborator and communicator. I thrive in environments where I can share ideas, learn from others, and contribute to collective success. Looking ahead, my goal is not only to excel in the IT industry but also to continuously push the boundaries of what technology can achieve.";
-  
-  const wrappedText = insertLineBreaks(longText, maxLength); 
-  
-
-
-  
-  const fullText = textToUse  === 'laptop' ?
-   `
-  class Developer {
-      constructor(
-          public fullName: string,
-          public age: number,
-          public aboutMe: string
-      ) { }
-  }
-  
-  const thiago = new Developer(
-      "Thiago Dambroski Cavalcanti Cruz",
-      22,
-      "${wrappedText}"
+  const visibleAbilities = currentAbilities.slice(
+    abilityPage * abilitiesPerPage,
+    abilityPage * abilitiesPerPage + abilitiesPerPage
   );
-  `
-  :
-   `
-  class Developer {
-      constructor(
-          public fullName: string,
-          public age: number,
-          public aboutMe: string
-      ) { }
-  }
-  
-  const thiago = new Developer(
-      "Thiago Dambroski Cavalcanti Cruz",
-      22,
-"${wrappedText}"
-  );
-  `
 
-
-  const aboutMeRef = useRef(null);
-
-  // Trigger typing effect when the element becomes visible
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setStartTyping(true);
-        }
-      },
-      { threshold: 0.1 } 
-    );
+    setAbilityPage(0);
+  }, [selectedSkill]);
 
-    if (aboutMeRef.current) {
-      observer.observe(aboutMeRef.current);
-    }
-
-    return () => {
-      if (aboutMeRef.current) {
-        observer.unobserve(aboutMeRef.current);
-      }
-    };
-  }, []);
-
-  // Typing effect logic
-  const charactersPerBatch = 5; // Number of characters to type at once
-const typingSpeed = 1; // Delay in milliseconds
-
-useEffect(() => {
-  if (startTyping && currentIndex < fullText.length) {
-    const timeoutId = setTimeout(() => {
-      const nextIndex = Math.min(currentIndex + charactersPerBatch, fullText.length);
-      setDisplayText((prevText) => prevText + fullText.slice(currentIndex, nextIndex));
-      setCurrentIndex(nextIndex);
-    }, typingSpeed);
-    return () => clearTimeout(timeoutId);
+  function handlePreviousAbilityPage() {
+    setAbilityPage((currentPage) => Math.max(currentPage - 1, 0));
   }
-}, [currentIndex, fullText, startTyping]);
+
+  function handleNextAbilityPage() {
+    setAbilityPage((currentPage) =>
+      Math.min(currentPage + 1, totalAbilityPages - 1)
+    );
+  }
 
   return (
-    <div className="page-about-me" ref={aboutMeRef}>
-      <div className="page-about-me-container-info">
-        <img src={thiago} className="photo" alt="selfie" />
-        <div className="page-about-me-cover-letter">
-          <h1>About Me</h1>
-          <div className="page-about-me-text-background">
-            <SyntaxHighlighter
-                language="javascript"
-                style={vscDarkPlus}
-                wrapLines={true}
-                wrapLongLines={true}
-                showLineNumbers={true}
-                className="syntax-highlighter" // Use the CSS class to style the SyntaxHighlighter
-                
-              >
-                {displayText}
-              </SyntaxHighlighter>
+    <section className="about-idle">
+      <div className="about-main">
+        <div className="about-avatar">
+          <img src={thiago} alt="Thiago Dambroski" />
+        </div>
+
+        <div className="about-terminal">
+          <div className="terminal-header">
+            <span>developer.system</span>
+            <span>{selectedSkill}</span>
           </div>
-          
+
+          <div className="terminal-code">
+            <div>
+              <span className="code-keyword">class</span>{" "}
+              <span className="code-class">Developer</span>{" "}
+              <span className="code-bracket">{"{"}</span>
+            </div>
+
+            <div className="code-line">
+              <span className="code-property">name</span>{" "}
+              <span className="code-operator">=</span>{" "}
+              <span className="code-string">"Thiago Dambroski"</span>
+            </div>
+
+            <div className="code-line">
+              <span className="code-property">role</span>{" "}
+              <span className="code-operator">=</span>{" "}
+              <span className="code-string">"Fullstack Developer"</span>
+            </div>
+
+            <div className="code-line">
+              <span className="code-property">education</span>{" "}
+              <span className="code-operator">=</span>{" "}
+              <span className="code-string">"Engenharia Informatica"</span>
+            </div>
+
+            <div className="code-line">
+              <span className="code-property">mainSkill</span>{" "}
+              <span className="code-operator">=</span>{" "}
+              <span className="code-string">"{selectedSkill}"</span>
+            </div>
+
+            <div>
+              <span className="code-bracket">{"}"}</span>
+            </div>
+
+            <div className="code-space">
+              <span className="code-method">system</span>
+              <span className="code-dot">.</span>
+              <span className="code-function">load</span>
+              <span className="code-bracket">();</span>
+            </div>
+          </div>
+
+          <div className="terminal-info">
+            <div className="ability-header">
+              <h3>{selectedSkill}</h3>
+
+              {totalAbilityPages > 1 && (
+                <div className="ability-controls">
+                  <button
+                    type="button"
+                    onClick={handlePreviousAbilityPage}
+                    disabled={abilityPage === 0}
+                  >
+                    {"<"}
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={handleNextAbilityPage}
+                    disabled={abilityPage === totalAbilityPages - 1}
+                  >
+                    {">"}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            <div className="ability-display">
+              {visibleAbilities.map((ability, index) => (
+                <div className="ability-tag" key={`${selectedSkill}-${ability}-${index}`}>
+                  <span className="tag-symbol">&lt;</span>
+                  <span className="tag-name">{ability}</span>
+                  <span className="tag-symbol"> /&gt;</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
-      
-
-      <div className="informations">
-        <div className="informations-pop-up">
-          <SkillPopup skill={"react"} isVisible={hoverSkill === "react"} nextSkill={handleNextSkill} previousSkill={handlePreviousSkill} />
-          <SkillPopup skill={"spring"} isVisible={hoverSkill === "spring"}  nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"java"} isVisible={hoverSkill === "java"}  nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"html"} isVisible={hoverSkill === "html"}  nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"css"} isVisible={hoverSkill === "css"} nextSkill={handleNextSkill} previousSkill={handlePreviousSkill} />
-          <SkillPopup
-            skill={"javaScript"}
-            isVisible={hoverSkill === "javaScript"}
-            nextSkill={handleNextSkill}
-            previousSkill={handlePreviousSkill}
+      <div className="skill-dock">
+        {Object.keys(skills).map((key) => (
+          <img
+            key={key}
+            src={skills[key].icon}
+            alt={key}
+            className={selectedSkill === key ? "active" : ""}
+            onClick={() => setSelectedSkill(key)}
           />
-          <SkillPopup skill={"typeScript"} isVisible={hoverSkill === "typeScript"} nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"phyton"} isVisible={hoverSkill === "phyton"}  nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"mysql"} isVisible={hoverSkill === "mysql"}  nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-          <SkillPopup skill={"git"} isVisible={hoverSkill === "git"} nextSkill={handleNextSkill} previousSkill={handlePreviousSkill}/>
-        </div>
-        <div className="informations-skills">
-          <div className="skills">
-            <h2 className="code">My Skills:</h2>
-          </div>
-
-          <div className="icons">
-            <div className="row">
-              <img
-                src={ reactIcon}
-                className={generalActive === "react" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("react")}
-                alt="react-icon"
-              />
-
-              <img
-                src={javaIcon}
-                className={generalActive === "java" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("java")}
-                alt="java-icon"
-              />
-
-              <img
-                src={springIcon}
-                className={generalActive === "spring" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("spring")}
-                alt="spring-icon"
-              />
-            </div>
-            <div className="row">
-              <img
-                src={htmlIcon}
-                className={generalActive === "html" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("html")}
-                alt="html-icon"
-              />
-
-              <img
-                src={cssIcon}
-                className={generalActive === "css" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("css")}
-                alt="css-icon"
-              />
-
-              <img
-                src={jsIcon}
-                className={generalActive === "javaScript" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("javaScript")}
-                alt="javaScript-icon"
-              />
-            </div>
-            <div className="row">
-
-            <img
-                src={ tsIcon}
-                className={generalActive === "typeScript" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("typeScript")}
-                alt="git-icon"
-              />
-              <img
-                src={phytonIcon}
-                className={generalActive === "phyton" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("phyton")}
-                alt="phyton-icon"
-              />
-
-              <img
-                src={mySqlIcon}
-                className={generalActive === "mysql" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("mysql")}
-                alt="mysql-icon"
-              />
-
-            </div>
-            <div className="row">
-            <img
-                src={gitIcon}
-                className={generalActive === "git" ? "program-icon pressed" : "program-icon"}
-                onClick={() => handleClick("git")}
-                alt="git-icon"
-              />
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 }
 

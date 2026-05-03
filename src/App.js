@@ -17,7 +17,7 @@ function App() {
      <Helmet>
         <title>Thiago Dambroski</title>
       </Helmet>
-      <NavBar restScreen={restScreen} />
+      {/*<NavBar restScreen={restScreen} />*/}
       <Routes>
         <Route exact path="/" element={<Home resetScreen={restScreen} />} />
         <Route

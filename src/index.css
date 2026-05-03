@@ -30,6 +30,7 @@ body{
   margin: 0px;
   background-color: #222222;
   color: #ffffff;
+  overflow-x: hidden;
 }
 
 .no-scroll{

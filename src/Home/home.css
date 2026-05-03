@@ -1,55 +1,130 @@
 .page-home {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url('/src/assets/images/background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    max-width: 100vw;
-    overflow: hidden;
-  }
-  
-  .title {
-    /*Monaco,Lucida Console,
-    Liberation Mono,DejaVu Sans Mono,
-    Bitstream Vera Sans Mono,Courier New
-    */
-    font-family:'IBM';
-    font-size: 55px;
-    color: white;
-  }
- 
-  
-  .slide {
-    font-family: 'IBM';
-    color: white;
-    font-size: 17px;
-    animation: slideIn 1.0s ease-out;
-  }
-  
-  @keyframes slideIn {
-    0% {
-      transform: translateX(110vw);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  width: 100vw;
+  height: 100vh;
+    background:  #0f0f0f;
+  overflow: hidden;
+}
 
+/* FULLSCREEN TERMINAL */
 
+.home-content {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #151515;
+  border-radius: 0;
+  border: none;
+
+  box-shadow: none;
+
+  font-family: "Fira Code", monospace;
+}
+
+/* HEADER stays like OS */
+
+.home-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 10px 16px;
+  background: #1f1f1f;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* window dots */
+
+.window-controls {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+/* BODY now fills screen */
+
+.home-body {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+   background:  #0f0f0f;
+}
+
+/* TITLE */
+
+.home-title {
+  font-size: 64px;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 6px;
+}
+
+/* CURSOR */
+
+.cursor {
+  margin-left: 6px;
+  opacity: 0.8;
+}
+
+/* SUBTITLE */
+
+.home-subtitle {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #7e78d9;
+
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.6s ease;
+}
+
+.home-subtitle.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SUBTLE IDLE GLOW */
+
+.home-title {
+  animation: glow 4s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0px rgba(126,120,217,0);
+  }
+  50% {
+    text-shadow: 0 0 14px rgba(126,120,217,0.4);
+  }
+  100% {
+    text-shadow: 0 0 0px rgba(126,120,217,0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+  .home-title {
+    font-size: 32px;
+    letter-spacing: 3px;
   }
 
-  @media only screen and (max-width: 800px) {
-
-    .page-home{
-      max-width: 100%;
-    }
-    .title{
-      font-size: 20px;
-    }
-
-    .slide{
-      font-size: 15px;
-    }
+  .home-subtitle {
+    font-size: 14px;
   }
+}

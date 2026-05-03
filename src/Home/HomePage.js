@@ -1,48 +1,62 @@
-import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 
 function HomePage() {
-  const text = "Hi,i am Thiago Dambroski";
+  const text = "THIAGO DAMBROSKI";
   const [displayText, setDisplayText] = useState("");
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
-  const [stopCursor, setStopCursor] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
+  const [finished, setFinished] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      if (currentIndex < text.length) {
-        setDisplayText((prevText) => prevText + text[currentIndex]);
-        setCurrentIndex((prevIndex) => prevIndex + 1);
-      } else {
-        setStopCursor(true);
-      }
-    }, 70);
+    if (index < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayText((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
+      }, 60);
 
-    return () => clearTimeout(timer);
-  }, [currentIndex, text]);
+      return () => clearTimeout(timer);
+    } else {
+      setFinished(true);
+    }
+  }, [index, text]);
 
   useEffect(() => {
-    const cursorTimer = setInterval(() => {
-      if (!stopCursor) {
-        setShowCursor((prevShowCursor) => !prevShowCursor);
-      }
+    const cursor = setInterval(() => {
+      setShowCursor((prev) => !prev);
     }, 500);
 
-    return () => clearInterval(cursorTimer);
+    return () => clearInterval(cursor);
   }, []);
 
   return (
-    <div className="page-home">
-      <div className="title">
-        {displayText}
-        {showCursor && !stopCursor && "|"}
+  <div className="page-home">
+    <div className="home-content">
+      
+      <div className="home-header">
+        <div className="window-controls">
+          <span className="dot red"></span>
+          <span className="dot yellow"></span>
+          <span className="dot green"></span>
+        </div>
+        <span>home.system</span>
       </div>
-      {stopCursor && <div className="slide">fullstack developer</div>}
+
+      <div className="home-body">
+        <h1 className="home-title">
+          {displayText}
+          <span className="cursor">{showCursor && "|"}</span>
+        </h1>
+
+        <h2 className={`home-subtitle ${finished ? "visible" : ""}`}>
+          Full-stack Developer
+        </h2>
+      </div>
+
     </div>
-  );
+  </div>
+);
 }
 
 export default HomePage;

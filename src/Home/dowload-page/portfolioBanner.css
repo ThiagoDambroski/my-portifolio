@@ -1,0 +1,94 @@
+.portfolio-banner {
+  width: 100%;
+  max-height: 25vh;
+  min-height: 180px;
+  padding: 30px 20px;
+  background: #0f0f0f;
+  color: white;
+  font-family: "Fira Code", "Consolas", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.portfolio-banner-content {
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.portfolio-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.portfolio-banner-command {
+  color: #4fc3f7;
+  font-size: 0.85rem;
+}
+
+.portfolio-banner-text h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.portfolio-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.portfolio-banner-button {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+}
+
+.portfolio-banner-button:hover {
+  color: white;
+  border-color: rgba(126, 120, 217, 0.7);
+  background: rgba(126, 120, 217, 0.16);
+  transform: translateY(-2px);
+}
+
+.portfolio-banner-button-active {
+  color: white;
+  background: rgba(126, 120, 217, 0.3);
+  border-color: rgba(126, 120, 217, 0.75);
+}
+
+@media only screen and (max-width: 800px) {
+  .portfolio-banner {
+    max-height: none;
+    min-height: auto;
+    padding: 28px 16px;
+  }
+
+  .portfolio-banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .portfolio-banner-actions {
+    width: 100%;
+  }
+
+  .portfolio-banner-button {
+    width: 100%;
+    text-align: center;
+  }
+}

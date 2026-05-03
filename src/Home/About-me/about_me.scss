@@ -1,317 +1,229 @@
-.page-about-me {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.about-idle {
+    width: 100%;
+    padding: 60px 20px;
+     background:  #0f0f0f;
+    color: white;
+    font-family: 'IBM';
+}
+
+.about-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    @media (max-width: 900px) {
+        flex-direction: column;
+    }
+}
+
+.about-avatar img {
+    width: 340px;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.about-terminal {
+    width: 100%;
+    max-width: 600px;
+    height: 460px;
+    background: #151515;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background: #1f1f1f;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.terminal-code {
+    padding: 26px 24px;
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: 0.95rem;
+    line-height: 2;
+    color: #9cdcfe;
+    flex: 1;
+}
+
+.code-line {
+    padding-left: 22px;
+}
+
+.code-space {
+    margin-top: 28px;
+}
+
+.code-keyword {
+    color: #569cd6;
+}
+
+.code-class {
+    color: #4fc3f7;
+}
+
+.code-property {
+    color: #9cdcfe;
+}
+
+.code-operator {
+    color: #d4d4d4;
+}
+
+.code-string {
+    color: #ce9178;
+}
+
+.code-bracket {
+    color: #ffd700;
+}
+
+.code-method {
+    color: #4fc3f7;
+}
+
+.code-dot {
+    color: #d4d4d4;
+}
+
+.code-function {
+    color: #dcdcaa;
+}
+
+.terminal-info {
+    min-height: 142px;
+    padding: 15px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.ability-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.ability-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1;
+    text-transform: lowercase;
+}
+
+.ability-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.ability-header button {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.2);
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: "Fira Code", "Consolas", monospace;
+}
+
+.ability-header button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.ability-display {
+    width: 100%;
+    height: 80px;
+    margin-top: 14px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    gap: 8px;
+    background: transparent;
+    border-radius: 8px;
+    padding: 0;
 }
 
+.ability-tag {
+    font-family: "Fira Code", "Consolas", monospace;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #4ec9b0;
 
+    padding: 6px 10px;
+    border-radius: 6px;
 
-.page-about-me-container-info{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    min-height: 600px;
-    @media only screen and (max-width: 600px) {
-        flex-direction: column;
-    }
-    .photo {
-        margin-left: 25px;
-        border-radius: 10px;
-        object-fit: cover;
-        object-position: right;
-        width: 35%;
-        
-    }
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    .page-about-me-cover-letter {
-        width: 55%;
-        @media only screen and (max-width: 600px) {
-            width: 100%;
-        }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        h1 {
-            font-family: 'IBM';
-            font-weight: 400;
-            margin-bottom: 0px;
-        
-        }
-        
-        .page-about-me-text-background {
-            width: 100%;
-            /* Full width of the parent container */
-            height: 100%;
-            /* Full height of the parent container */
-            max-width: 100%;
-            /* Ensure it doesn’t exceed parent width */
-            max-height: 100%;
-            /* Ensure it doesn’t exceed parent height */
-            overflow: hidden;
-            /* Hide overflow to avoid scrollbars */
-            box-sizing: border-box;
-            /* Include padding and border in the element’s total width and height */
-        }
-        
-        .syntax-highlighter {
-            width: 100%;
-            
-            overflow: auto;
-            white-space: pre-wrap;
-            /* Preserve whitespace and wrap long lines */
-            box-sizing: border-box;
-        }
-        
-        
-        .page-about-me-code-about {
-            margin-top: 0px;
-            padding-top: 0px;
-        }
-    }
-    
-   
+    white-space: nowrap;
 }
 
+.tag-symbol {
+    color: #8080ff;
+}
 
+.tag-name {
+    color: #4ec9b0;
+}
 
-.informations {
+.skill-dock {
+    margin-top: 40px;
     display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: start;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    .informations-skills {
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .skills {
-        margin-bottom: 5vh;
-        display: flex;
-        justify-content: center;
-        /*.code-small {
-        font-family: 'IBM';
-        font-weight: lighter;
-        font-size: 20px;
-        }
-        */
-        .code {
-            font-family: 'IBM';
-            font-weight: lighter;
-        
-        }
-    
-    }
-    
-    
-    .popup {
-        display: flex;
-        justify-content: center;
-    
-        background-color: rgba(0, 0, 0, 0.8);
-        color: #fff;
-        padding: 8px;
-        border-radius: 5px;
-        z-index: 1;
-    
-        width: 450px;
-        height: 95%;
-        
-        ul {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            font-family: 'IBM';
-            font-weight: normal;
-            
-        }
-        li {
-    
-            font-size: 18px;
-            margin-bottom: 10px;
-            list-style: none;
-            font-family: 'IBM';
-            @media only screen and (max-width: 600px) {
-                font-size: 0.7rem;
-             }
-        }
-        .skill-title {
-            display: flex;
-        
-            justify-content: center;
-            text-transform: capitalize;
-            .skill-title-head {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                img {
-                    cursor: pointer;
-                    width: 25px;
-                    height: 25px;
-                }
-                .cursorPointer:hover {
-                    cursor: pointer;
-                }
-            }
-            p {
-                margin-top: 0px;
-                margin-bottom: 0px;
-            
-            }
-        }
-        
-    
-    }
-    
+    justify-content: center;
+    gap: 20px;
+}
 
-    
-    .icons {
-    
-        max-width: 70%;
-        display: flex;
+.skill-dock img {
+    width: 45px;
+    height: 45px;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.skill-dock img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.skill-dock img.active {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+@media (max-width: 700px) {
+    .about-idle {
+        padding: 40px 16px;
+    }
+
+    .about-avatar img {
+        width: 100%;
+        max-width: 340px;
+        height: 420px;
+    }
+
+    .about-terminal {
+        height: 460px;
+    }
+
+    .terminal-code {
+        padding: 22px 18px;
+        font-size: 0.85rem;
+    }
+
+    .ability-display {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-dock {
         flex-wrap: wrap;
-        .row {
-            flex-basis: 100%;
-            display: flex;
-            justify-content: space-around;
-        
-            margin-bottom: 5vh;
-            .program-icon {
-        
-                
-                max-width: 20%;
-                transition: transform 0.15s ease-in-out, brightness 0.15s ease-in-out;
-                @media only screen and (max-width: 600px) {
-                    max-width: 40%;
-                 }
-
-                &:hover{
-                    cursor: pointer;
-                }
-
-               &.pressed {
-                transform: scale(0.80);
-            
-                filter: brightness(0.6);
-            
-            }
-            
-            }
-            
-           
-        
-        }
-       
-    
     }
-    
-    
-    
-    
-    
-    
-    
-   
-
-}
-
-
-
-@media only screen and (max-width: 1081px) {
-    .page-about-me {
-        /*new*/
-
-        align-items: flex-start;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-
-    }
-
-    .syntax-highlighter {
-        font-size: 5px;
-    }
-
-
-
-    .react-syntax-highlighter-line-number {
-        width: 10px;
-    }
-
-    .photo {
-        margin-left: 0px;
-        align-self: center;
-        max-width: 250px;
-    }
-
-    .page-about-me-cover-letter {
-        align-self: center;
-        width: 90%;
-    }
-
-    .page-about-me-cover-letter h1 {
-        font-size: 20px;
-    }
-
-    .page-about-me-cover-letter p {
-        font-size: 10px;
-    }
-
-    .informations {
-        max-width: 95%;
-        flex-direction: column-reverse;
-        margin-left: 5vw;
-        margin-right: 0px;
-        margin-top: 0px;
-    }
-
-    .skills {
-        width: 35vw;
-        margin-bottom: 0vw;
-    }
-
-    .code {
-        font-size: larger;
-    }
-
-    .program-icon {
-        margin-right: 20px;
-        max-width: 10vw;
-
-    }
-
-
-
-    .informations-pop-up {
-        align-self: center;
-        max-width: 98%;
-    }
-
-    .popup {
-
-        max-width: 88%;
-        max-height: 400px;
-    }
-
-    .popup li {
-        font-size: 12px;
-    }
-
-    .informations-skills {
-        align-self: center;
-    }
-
-
-
 }

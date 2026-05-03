@@ -1,0 +1,180 @@
+.experience-education {
+    width: 100%;
+    padding: 80px 20px;
+    font-family: 'IBM';
+   background:  #0f0f0f;
+    color: white;
+}
+
+.experience-education h1 {
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 45px;
+    letter-spacing: 2px;
+}
+
+.experience-education-list {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-education-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 28px;
+    border-radius: 16px;
+    background: rgba(15, 15, 15, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s ease;
+}
+
+.experience-education-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(126, 120, 217, 0.7);
+}
+
+.experience-education-code {
+    display: flex;
+    gap: 18px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #151515;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    overflow: hidden;
+}
+
+.line-number {
+    color: #6a9955;
+    opacity: 0.8;
+}
+
+.keyword {
+    color: #569cd6;
+}
+
+.variable {
+    color: #4fc3f7;
+}
+
+.operator {
+    color: #d4d4d4;
+}
+
+.bracket {
+    color: #ffd700;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.experience-education-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.experience-education-info span {
+    width: fit-content;
+    margin-bottom: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(126, 120, 217, 0.2);
+    color: #a9a4ff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experience-education-info h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.experience-education-info h3 {
+    margin: 8px 0 15px;
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.experience-education-info p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    button {
+        padding: 10px 20px;
+        border-radius: 8px;
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        font-family: 'IBM';
+        cursor: pointer;
+        transition: all 0.25s ease;
+    }
+
+    button.active {
+        background: #7e78d9;
+        border-color: #7e78d9;
+    }
+
+    button:hover {
+        background: rgba(255,255,255,0.1);
+    }
+}
+
+.pagination {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    button {
+        padding: 8px 16px;
+        border-radius: 6px;
+        border: none;
+        background: #7e78d9;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+
+    span {
+        font-size: 0.9rem;
+        opacity: 0.7;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .experience-education-card {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-education-code {
+        font-size: 0.8rem;
+    }
+}

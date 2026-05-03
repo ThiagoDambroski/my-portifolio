@@ -5,6 +5,8 @@ import NewPage1 from "./Page1/NewPage1";
 import ContactMe from "./ContactMe/ContactMe";
 import CoverLetter from "./CoverLetter/CoverLetter";
 import imageTest from "../assets/images/background.jpg";
+import ExperienceEducation from "./Page1/ExperienceEducation";
+import PortfolioBanner from "./dowload-page/PortfolioBanner";
 
 function Home({ resetScreen }) {
   const [lightboxOpen, setLightboxOpen] = useState({
@@ -26,6 +28,8 @@ function Home({ resetScreen }) {
     <>
       <HomePage />
       <About_me />
+      <PortfolioBanner/>
+      <ExperienceEducation/>
       <NewPage1 openLightbox={openLightbox} />
       {/*<Page1 resetScreen={resetScreen} /> */}
       {/*<CoverLetter/>*/}
