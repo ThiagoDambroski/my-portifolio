@@ -30,7 +30,7 @@ function PortfolioBanner() {
           </a>
 
           <a
-            href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+            href="https://youtu.be/ZNuPQIHktF0"
             target="_blank"
             rel="noreferrer"
             className="portfolio-banner-button portfolio-banner-button-active"
