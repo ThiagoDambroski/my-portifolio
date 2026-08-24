@@ -1,36 +1,201 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./about_me.scss";
 import thiago from "../../assets/images/thiago.jpg";
 
 import reactIcon from "../../assets/images/icon/programs icon/react.png";
 import javaIcon from "../../assets/images/icon/programs icon/java.png";
 import springIcon from "../../assets/images/icon/programs icon/spring-icon.png";
-import phytonIcon from "../../assets/images/icon/programs icon/phytonIcon.png";
+import pythonIcon from "../../assets/images/icon/programs icon/phytonIcon.png";
 import htmlIcon from "../../assets/images/icon/programs icon/html.png";
 import cssIcon from "../../assets/images/icon/programs icon/css.png";
 import jsIcon from "../../assets/images/icon/programs icon/js.png";
 import mySqlIcon from "../../assets/images/icon/programs icon/mysql.png";
 import gitIcon from "../../assets/images/icon/programs icon/git.png";
 import tsIcon from "../../assets/images/icon/programs icon/ts.png";
+import cIcon from "../../assets/images/icon/programs icon/C_icon'.png"
 
 function AboutMe() {
   const [selectedSkill, setSelectedSkill] = useState("react");
   const [abilityPage, setAbilityPage] = useState(0);
 
   const skills = {
-    react: { icon: reactIcon, abilities: ["Hooks", "Context", "Reusable UI"] },
-    java: { icon: javaIcon, abilities: ["OOP", "Collections"] },
-    spring: { icon: springIcon, abilities: ["APIs", "Security"] },
-    html: { icon: htmlIcon, abilities: ["Semantic HTML"] },
-    css: { icon: cssIcon, abilities: ["Flexbox", "Grid"] },
-    javaScript: { icon: jsIcon, abilities: ["Async", "DOM"] },
-    typeScript: { icon: tsIcon, abilities: ["Types", "Interfaces"] },
-    phyton: { icon: phytonIcon, abilities: ["Scripting"] },
-    mysql: { icon: mySqlIcon, abilities: ["Queries"] },
-    git: { icon: gitIcon, abilities: ["Version Control"] }
+    react: {
+      icon: reactIcon,
+      abilities: [
+        "Hooks",
+        "Context API",
+        "Reusable UI",
+        "React Router",
+        "Protected Routes",
+        "Controlled Forms",
+        "Conditional Rendering",
+        "State Management",
+        "Component Props",
+        "Modal UI"
+      ]
+    },
+
+    java: {
+      icon: javaIcon,
+      abilities: [
+        "OOP",
+        "Collections",
+        "File Reading",
+        "CSV Parsing",
+        "Exception Handling",
+        "Unit Testing",
+        "JUnit 5",
+        "Streams",
+        "Encapsulation",
+        "Class Design"
+      ]
+    },
+
+    spring: {
+      icon: springIcon,
+      abilities: [
+        "REST APIs",
+        "Spring Security",
+        "JWT Auth",
+        "DTO Validation",
+        "Controllers",
+        "Services",
+        "Repositories",
+        "JPA",
+        "Flyway",
+        "DDD Structure"
+      ]
+    },
+
+    html: {
+      icon: htmlIcon,
+      abilities: [
+        "Semantic HTML",
+        "Forms",
+        "Links",
+        "Buttons",
+        "Lists",
+        "Images",
+        "Sections",
+        "Accessibility Basics",
+        "Page Structure",
+        "SEO Basics"
+      ]
+    },
+
+    css: {
+      icon: cssIcon,
+      abilities: [
+        "Flexbox",
+        "Grid",
+        "SCSS",
+        "Responsive Design",
+        "Animations",
+        "Hover Effects",
+        "Modals",
+        "Overlays",
+        "Gradients",
+        "Layout Fixes"
+      ]
+    },
+
+    javaScript: {
+      icon: jsIcon,
+      abilities: [
+        "Async",
+        "DOM",
+        "Fetch API",
+        "Events",
+        "Arrays",
+        "Objects",
+        "Modules",
+        "Form Logic",
+        "Filtering",
+        "Sorting"
+      ]
+    },
+
+    typeScript: {
+      icon: tsIcon,
+      abilities: [
+        "Types",
+        "Interfaces",
+        "Union Types",
+        "Typed Props",
+        "Typed State",
+        "DTO Types",
+        "API Types",
+        "Optional Fields",
+        "Type Guards",
+        "Error Fixing"
+      ]
+    },
+
+    python: {
+      icon: pythonIcon,
+      abilities: [
+        "Scripting",
+        "File Handling",
+        "Automation",
+        "Data Parsing",
+        "Functions",
+        "Lists",
+        "Dictionaries",
+        "Loops",
+        "Basic Debugging",
+        "Problem Solving"
+      ]
+    },
+    c: {
+      icon: cIcon,
+      abilities: [
+        "Pointers",
+        "Memory Addresses",
+        "Arrays",
+        "Strings",
+        "Matrices",
+        "Structs",
+        "Dynamic Memory",
+        "File Handling",
+        "Linked Lists",
+        "Debugging"
+      ]
+    },
+
+    mysql: {
+      icon: mySqlIcon,
+      abilities: [
+        "Queries",
+        "Tables",
+        "Relations",
+        "Primary Keys",
+        "Foreign Keys",
+        "Joins",
+        "CRUD",
+        "Indexes",
+        "Schema Design",
+        "Migrations"
+      ]
+    },
+
+    git: {
+      icon: gitIcon,
+      abilities: [
+        "Version Control",
+        "Commits",
+        "Branches",
+        "GitHub",
+        "GitHub Pages",
+        "Deployment",
+        "Merge Fixes",
+        "Repository Setup",
+        "Build Deploy",
+        "Project History"
+      ]
+    }
   };
 
-  const abilitiesPerPage = 5;
+  const abilitiesPerPage = 7;
   const currentAbilities = skills[selectedSkill].abilities;
   const totalAbilityPages = Math.ceil(currentAbilities.length / abilitiesPerPage);
 
@@ -82,17 +247,17 @@ function AboutMe() {
             <div className="code-line">
               <span className="code-property">role</span>{" "}
               <span className="code-operator">=</span>{" "}
-              <span className="code-string">"Fullstack Developer"</span>
+              <span className="code-string">"Full-Stack Developer"</span>
             </div>
 
             <div className="code-line">
               <span className="code-property">education</span>{" "}
               <span className="code-operator">=</span>{" "}
-              <span className="code-string">"Engenharia Informatica"</span>
+              <span className="code-string">"Computer Engineering"</span>
             </div>
 
             <div className="code-line">
-              <span className="code-property">mainSkill</span>{" "}
+              <span className="code-property">displaySkill</span>{" "}
               <span className="code-operator">=</span>{" "}
               <span className="code-string">"{selectedSkill}"</span>
             </div>

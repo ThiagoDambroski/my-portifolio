@@ -1,7 +1,6 @@
-import React from "react";
 import { useEffect } from "react";
-import ProjectPage from "./ProjectPage/ProjectPage";
 import ProjectContent from "./ProjectContent/ProjectContent";
+import ProjectPage from "./ProjectPage/ProjectPage";
 
 function Projects({ projectData }) {
   useEffect(() => {

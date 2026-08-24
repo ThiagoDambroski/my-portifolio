@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react'
+const PROJECT_TYPE_BY_TITLE = {
+  "Back-End": 0,
+  "Front-End": 1,
+  "Full Stack": 3,
+};
 
-
-function ToggleButton({title,activeProject,setActiveProject}) {
-
-
-  const [active,setActive] = useState()
-
-
-  useEffect(() => {
-    setActive(activeProject === (title === 'Back-End' ? 0 : title === 'Front-End' ? 1 : 3));
-  }, [activeProject]);
-
-  const handleClick = () => {
-    setActiveProject(title === 'Back-End' ? 0 : title === 'Front-End' ? 1 : 3);
-  }
-
+function ToggleButton({ title, activeProject, setActiveProject }) {
+  const projectType = PROJECT_TYPE_BY_TITLE[title];
+  const active = activeProject === projectType;
 
   return (
-    <div className={`toggle-project-title ${active ? 'button-active' : ''}`} onClick={handleClick}>
-        {title}
-    </div>
-  )
+    <button
+      type="button"
+      className={`toggle-project-title ${active ? "button-active" : ""}`}
+      onClick={() => setActiveProject(projectType)}
+    >
+      {title}
+    </button>
+  );
 }
 
-export default ToggleButton
+export default ToggleButton;

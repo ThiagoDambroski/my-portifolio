@@ -1,57 +1,87 @@
 @font-face {
-  font-family: 'ysabeauSC';
-  src: url('assets/fonts/Ysabeau_SC/YsabeauSC-Black.ttf');
+  font-family: "ysabeauSC";
+  src: url("assets/fonts/Ysabeau_SC/YsabeauSC-Black.ttf");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'lato';
-  src: url('assets/fonts/Lato/Lato-Bold.ttf');
+  font-family: "lato";
+  src: url("assets/fonts/Lato/Lato-Bold.ttf");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'sourceSans';
-  src: url('assets/fonts/Source_Sans_3/SourceSans3-Bold.ttf');
+  font-family: "sourceSans";
+  src: url("assets/fonts/Source_Sans_3/SourceSans3-Bold.ttf");
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'code';
-  src: url('assets/fonts/Fira_Code/FiraCode-Regular.ttf')
-}
-@font-face {
-  font-family: 'IBM';
-  src: url('assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf');
-}
-@font-face {
-  font-family: 'exo';
-  src: url('assets/fonts/Exo/Exo-Regular.ttf');
+  font-family: "code";
+  src: url("assets/fonts/Fira_Code/FiraCode-Regular.ttf");
+  font-display: swap;
 }
 
-body{
-  margin: 0px;
+@font-face {
+  font-family: "IBM";
+  src: url("assets/fonts/IBM_Plex_Mono/IBMPlexMono-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "exo";
+  src: url("assets/fonts/Exo/Exo-Regular.ttf");
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: #0f0f0f;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
   background-color: #222222;
   color: #ffffff;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.no-scroll{
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.no-scroll {
   overflow: hidden;
 }
 
 body::-webkit-scrollbar {
-  width: 8px; 
+  width: 8px;
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #f1f1f1; 
+  background-color: #f1f1f1;
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #888;
-  border-radius: 4px; 
+  border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background-color: #555; 
+  background-color: #555;
 }
-
-

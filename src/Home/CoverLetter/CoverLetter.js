@@ -1,4 +1,3 @@
-import React from 'react'
 import './coverLetter.css'
 
 function CoverLetter() {

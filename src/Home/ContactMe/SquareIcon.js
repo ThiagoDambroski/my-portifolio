@@ -1,40 +1,44 @@
-import React from "react";
+function SquareIcon({ image, description, type }) {
+  const openExternal = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
-function SquareIcon({ image, title, description, type }) {
   const handleClick = () => {
     if (type === "email") {
       window.location.href = `mailto:${description}`;
+      return;
     }
+
     if (type === "tel") {
-      const phoneNumber = "351927267839";
-      window.open(
-        `https://api.whatsapp.com/send?phone=${phoneNumber}`,
-        "_blank"
-      );
+      openExternal("https://api.whatsapp.com/send?phone=351927267839");
+      return;
     }
+
     if (type === "git") {
-      window.open(`https://${description}`, "_blank");
+      openExternal(`https://${description}`);
+      return;
     }
+
     if (type === "linkedin") {
-      window.open(`https://linkedin.com/in/${description}`, "_blank");
+      openExternal(`https://linkedin.com/in/${description}`);
+      return;
     }
+
     if (type === "upwork") {
-      window.open(
-        `https://www.upwork.com/freelancers/~01e0c744d6b49b8eb6`,
-        "_blank"
-      );
+      openExternal("https://www.upwork.com/freelancers/~01e0c744d6b49b8eb6");
+      return;
     }
+
     if (type === "youtube") {
-      window.open("https://www.youtube.com/@thiagodambroski5666");
+      openExternal("https://www.youtube.com/@thiagodambroski5666");
     }
   };
-  //
+
   return (
-    <div className="square-icon" onClick={handleClick}>
-      <img src={image} alt="icons" className="square-icon-image"/>
+    <button type="button" className="square-icon" onClick={handleClick}>
+      <img src={image} alt="" className="square-icon-image" />
       <p>{description}</p>
-      
-    </div>
+    </button>
   );
 }
 

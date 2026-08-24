@@ -238,3 +238,8 @@ tr:hover {
 
 
 }
+button.class-label,
+button.class-label-ative {
+  border: 0;
+  font: inherit;
+}

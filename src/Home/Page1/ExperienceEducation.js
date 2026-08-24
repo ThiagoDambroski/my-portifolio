@@ -1,37 +1,58 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./experienceEducation.css";
 
 function ExperienceEducation() {
   const data = [
-    {
-      type: "job",
-      title: "Fullstack Developer",
-      place: "Teatro Lisboa",
-      date: "2025 - Present",
-      description: "Building a fullstack streaming platform with React and Spring Boot."
-    },
-    {
-      type: "job",
-      title: "Freelancer",
-      place: "Self-employed",
-      date: "2023 - Present",
-      description: "Working on frontend and fullstack projects for clients."
-    },
-    {
-      type: "education",
-      title: "Web Development",
-      place: "ETIC",
-      date: "2024 - 2025",
-      description: "Focused on modern web applications and UI."
-    },
-    {
-      type: "education",
-      title: "Computer Science",
-      place: "University",
-      date: "2021 - 2024",
-      description: "Studied algorithms, databases and software engineering."
-    }
-  ];
+  {
+    type: "job",
+    title: "Full-Stack Developer",
+    place: "OTL Cinema Teatral Lisboa",
+    date: "Nov 2025 - Present",
+    description: "Developed a full-stack website for a theatre play rental platform using React on the front end and Java on the back end."
+  },
+  {
+    type: "job",
+    title: "Full-Stack Developer",
+    place: "Lips-lab",
+    date: "Oct 2025 - Jan 2026",
+    description: "Developed a website for lipstick and gloss customization and sales, including an interactive real-time colour-changing system."
+  },
+  {
+    type: "job",
+    title: "Back-End Developer Intern",
+    place: "Reative",
+    date: "Sep 2025 - Oct 2025",
+    description: "Worked on back-end development with Spring Boot, applying Domain-Driven Design principles to structure services and application domain logic."
+  },
+  {
+    type: "job",
+    title: "Front-End Developer",
+    place: "Miguel Silva - Saúde e Bem Estar",
+    date: "Jan 2025 - Mar 2025",
+    description: "Developed a modern website for an osteopathy clinic using React and Vite, focused on user experience, fast interface performance and intuitive navigation."
+  },
+  {
+    type: "job",
+    title: "Full-Stack Developer Intern",
+    place: "Own Product",
+    date: "Sep 2024 - Dec 2024",
+    description: "Worked on a full-stack application project, focusing on back-end development with Spring Boot and Domain-Driven Design principles."
+  },
+  {
+    type: "education",
+    title: "Bachelor's Degree in Computer Engineering",
+    place: "Universidade Lusófona",
+    date: "2025 - 2028",
+    description: "Studying computer engineering with focus on programming, software development, algorithms, databases and engineering fundamentals."
+  },
+  {
+    type: "education",
+    title: "Full-Stack Web Development Certification",
+    place: "ETIC",
+    date: "2025 - 2026",
+    description: "Focused on full-stack web development, including modern front-end and back-end technologies used to build complete web applications."
+  }
+];
 
   const [filter, setFilter] = useState("job");
   const [page, setPage] = useState(0);

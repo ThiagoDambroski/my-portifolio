@@ -82,3 +82,6 @@
     grid-template-columns: 1fr;
   }
 }
+.dock-line {
+  text-decoration: none;
+}

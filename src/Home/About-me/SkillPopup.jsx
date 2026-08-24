@@ -1,9 +1,8 @@
-import React from "react";
 import { useState } from "react";
-import smallLeftArrow from '../../assets/images/icon/compact-left-arrow.png'
-import smallRightArrow from '../../assets/images/icon/compact-right-arrow.png'
+import smallLeftArrow from "../../assets/images/icon/compact-left-arrow.png";
+import smallRightArrow from "../../assets/images/icon/compact-right-arrow.png";
 
-function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
+function SkillPopup({ skill, isVisible, nextSkill, previousSkill }) {
   const skillInfos = {
     react: [
       "Components",
@@ -21,7 +20,6 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "React Routes",
       "Code Splitting",
     ],
-
     java: [
       "Java Fundamentals",
       "OOP",
@@ -33,7 +31,6 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "Unit Testing",
       "Game Development",
     ],
-
     spring: [
       "Spring Core",
       "Spring Boot Configuration",
@@ -44,11 +41,14 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "Spring Testing",
       "Error Handling",
     ],
-
-    html: ["HTML5 tags", "HTML5 Structure", "HTML5 Entity", 
-      "HTML5 Forms","HTML5 Audio/Video","HTML5 Web Storage",
-      ],
-
+    html: [
+      "HTML5 tags",
+      "HTML5 Structure",
+      "HTML5 Entity",
+      "HTML5 Forms",
+      "HTML5 Audio/Video",
+      "HTML5 Web Storage",
+    ],
     css: [
       "Bootstrap 5",
       "CSS Selectors",
@@ -64,7 +64,6 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "CSS Flexbox",
       "CSS Pseudo-classes",
     ],
-
     javaScript: [
       "Basic Syntax",
       "DOM Manipulation",
@@ -80,9 +79,7 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "Arrays and Objects",
       "Error Handling",
     ],
-
-    phyton: ["Phyton Fundamentals", "OOP", "Control Flow", "Pandas"],
-
+    python: ["Python Fundamentals", "OOP", "Control Flow", "Pandas"],
     mysql: [
       "SQL Basics",
       "Data Manipulation",
@@ -92,7 +89,6 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "DML",
       "Data Joins",
     ],
-
     git: [
       "Git Commands",
       "Branching and Merging",
@@ -100,88 +96,79 @@ function SkillPopup({ skill, isVisible,nextSkill,previousSkill }) {
       "Git Workflows",
     ],
     typeScript: [
-    "React + TypeScript",
-    "Basic Syntax",
-    "Type Annotations",
-    "Interfaces",
-    "Enums",
-    "Generics",
-    "Type Inference",
-    "Union and Intersection Types",
-    "Decorators"
-  ],
+      "React + TypeScript",
+      "Basic Syntax",
+      "Type Annotations",
+      "Interfaces",
+      "Enums",
+      "Generics",
+      "Type Inference",
+      "Union and Intersection Types",
+      "Decorators",
+    ],
   };
 
   const [skillPage, setSkillPage] = useState(0);
-
-  const numberPerPage = 15
-
+  const numberPerPage = 15;
   const totalSkills = skillInfos[skill].length;
   const totalPages = Math.ceil(totalSkills / numberPerPage);
+  const pageStart = numberPerPage * skillPage;
+  const pageEnd = numberPerPage * (skillPage + 1);
 
   const nextPage = () => {
-    const nextPageValue = skillPage + 1;
-
-    if (nextPageValue < totalPages) {
-      setSkillPage(nextPageValue);
-    }
+    setSkillPage((currentPage) =>
+      Math.min(currentPage + 1, totalPages - 1)
+    );
   };
 
-  const prevPage = () => {
-    const prevPageValue = skillPage < 1;
-    if (prevPageValue >= 0) {
-      setSkillPage(prevPageValue);
-    }
+  const previousPage = () => {
+    setSkillPage((currentPage) => Math.max(currentPage - 1, 0));
   };
 
-  if (!isVisible) return null;
-
-  
+  if (!isVisible) {
+    return null;
+  }
 
   return (
     <div className="popup">
-      <ul>
-        <div className="skill-title">
-          <div className="skill-title-head">
-            <img src={smallLeftArrow} onClick={previousSkill}/>
-            <p>{skill}</p>
-            <img src={smallRightArrow} onClick={nextSkill}/>
-          </div>
+      <div className="skill-title">
+        <div className="skill-title-head">
+          <button type="button" onClick={previousSkill} aria-label="Previous skill">
+            <img src={smallLeftArrow} alt="" />
+          </button>
+          <p>{skill}</p>
+          <button type="button" onClick={nextSkill} aria-label="Next skill">
+            <img src={smallRightArrow} alt="" />
+          </button>
         </div>
-        <br />
-        {totalSkills > numberPerPage ? (
-          <>
-            {skillInfos[skill]
-              .slice(11 * skillPage, numberPerPage * (skillPage + 1))
-              .map((item) => (
-                <li>{item}</li>
-              ))}
-            <div style={{ display: "flex" }}>
-              {skillPage > 0 && (
-                <>
-                  <li className="cursorPointer" onClick={() => prevPage()}>
-                    {"<-"}
-                  </li>
-                </>
-              )}
-              {skillPage + 1 < totalPages && (
-                <>
-                  {" "}
-                  <li className="cursorPointer" onClick={() => nextPage()}>
-                    {"->"}
-                  </li>
-                </>
-              )}
-            </div>
-          </>
-        ) : (
-          <>
-            {skillInfos[skill].map((item) => (
-              <li>{item}</li>
-            ))}
-          </>
-        )}
+      </div>
+
+      <ul>
+        {skillInfos[skill].slice(pageStart, pageEnd).map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
+
+      {totalPages > 1 && (
+        <div style={{ display: "flex" }}>
+          <button
+            type="button"
+            className="cursorPointer"
+            onClick={previousPage}
+            disabled={skillPage === 0}
+          >
+            {"<-"}
+          </button>
+          <button
+            type="button"
+            className="cursorPointer"
+            onClick={nextPage}
+            disabled={skillPage === totalPages - 1}
+          >
+            {"->"}
+          </button>
+        </div>
+      )}
     </div>
   );
 }

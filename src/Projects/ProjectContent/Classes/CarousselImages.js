@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './classes.css';
 import ProjectArrowRight from '../../../assets/images/icon/project-right-arrow.png';
 import ProjectArrowLeft from '../../../assets/images/icon/project-left-arrow.png';

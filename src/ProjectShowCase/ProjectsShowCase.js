@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import "./projectShowCase.css";
-import { useEffect } from "react";
-import ToggleProject from "./ToggleProject";
+import { useEffect, useState } from "react";
 import ToggleButton from "./ToggleButton";
+import ToggleProject from "./ToggleProject";
+import "./projectShowCase.css";
 
 function ProjectsShowCase({ projects }) {
   useEffect(() => {
@@ -11,8 +10,7 @@ function ProjectsShowCase({ projects }) {
 
   const backEndProjects = projects.filter((item) => item.type === 1);
   const frontEndProjects = projects.filter((item) => item.type === 2);
-  const fullStackProjects = projects.filter((item) => item.type === 3)
-
+  const fullStackProjects = projects.filter((item) => item.type === 3);
   const [activeProject, setActiveProject] = useState(1);
 
   return (

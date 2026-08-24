@@ -1,57 +1,46 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
+import { Helmet } from "react-helmet";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { projectData } from "./ProjectData";
-import Projects from "./Projects/Projects";
-import Home from "./Home/Home";
-import NavBar from "./NavBar/navBar";
 import ContactMe from "./Home/ContactMe/ContactMe";
+import Home from "./Home/Home";
 import ProjectsShowCase from "./ProjectShowCase/ProjectsShowCase";
-import { Helmet } from 'react-helmet';
-function App() {
-  const restScreen = () => {
-    window.scrollTo(0, 0);
-  };
+import Projects from "./Projects/Projects";
 
+function App() {
   return (
     <>
-     <Helmet>
-        <title>Thiago Dambroski</title>
+      <Helmet>
+        <title>Thiago Dambroski | Full-Stack Developer</title>
+        <meta
+          name="description"
+          content="Portfolio of Thiago Dambroski, a full-stack developer building responsive web applications, React interfaces, and Java Spring Boot back ends."
+        />
+        <meta name="author" content="Thiago Dambroski" />
+        <meta property="og:title" content="Thiago Dambroski | Full-Stack Developer" />
+        <meta
+          property="og:description"
+          content="Explore full-stack, front-end, and back-end projects by Thiago Dambroski."
+        />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
       </Helmet>
-      {/*<NavBar restScreen={restScreen} />*/}
+
       <Routes>
-        <Route exact path="/" element={<Home resetScreen={restScreen} />} />
-        <Route
-          path="/backEndProjectFoodDelivery"
-          element={<Projects projectData={projectData[2]} />}
-        />
-
-        <Route
-          path="/frontEndProjectArchitectPortifolio"
-          element={<Projects projectData={projectData[1]} />}
-        />
-        <Route
-          path="/frontEndProjectReeyogar"
-          element={<Projects projectData={projectData[3]} />}
-        />
-        <Route
-          path="/frontEndProjectPapafigo"
-          element={<Projects projectData={projectData[4]} />}
-        />
-        <Route
-          path="/backEndProjectWebStore"
-          element={<Projects projectData={projectData[0]} />}
-        />
-
-        <Route
-          path='/fullStackProjectClientManagerApp'
-          element={<Projects projectData={projectData[5]}/>}
-        />
-
+        <Route path="/" element={<Home />} />
         <Route
           path="/showCase"
           element={<ProjectsShowCase projects={projectData} />}
         />
+        {projectData.map((project) => (
+          <Route
+            key={project.id}
+            path={project.navLink}
+            element={<Projects projectData={project} />}
+          />
+        ))}
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
       <ContactMe />
     </>
   );

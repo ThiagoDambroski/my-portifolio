@@ -82,3 +82,7 @@
         height: 50px;
     }
   }
+button.toggle-project-title {
+    border: 0;
+    font: inherit;
+}
